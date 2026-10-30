@@ -1,0 +1,1264 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Madagascar &amp; Antananarivo 2026 — Diagnostic, marché et opportunités d'affaires</title>
+<style>
+  :root{
+    --ink:#101c26; --ink-2:#2b3b47; --muted:#5c6b76;
+    --paper:#f6f4ef; --card:#ffffff; --line:#e2ddd3;
+    --terra:#b8432a; --terra-soft:#f6e4de;
+    --teal:#0d6a5b; --teal-soft:#dcefe9;
+    --gold:#c08a1e; --gold-soft:#faeed3;
+    --blue:#245b8c; --blue-soft:#e0ebf5;
+    --radius:14px;
+    --shadow:0 1px 2px rgba(16,28,38,.06), 0 8px 24px -12px rgba(16,28,38,.25);
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0; background:var(--paper); color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    font-size:16px; line-height:1.65; -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,h4{line-height:1.2; margin:0 0 .5em; letter-spacing:-.015em}
+  h1{font-size:clamp(2rem,5vw,3.4rem); font-weight:800}
+  h2{font-size:clamp(1.5rem,3vw,2.1rem); font-weight:800; margin-top:0}
+  h3{font-size:1.18rem; font-weight:750; margin-top:2em}
+  h4{font-size:1rem; font-weight:750; margin:1.4em 0 .4em; text-transform:uppercase; letter-spacing:.06em; color:var(--muted)}
+  p{margin:0 0 1em}
+  a{color:var(--teal)}
+  small{font-size:.82rem; color:var(--muted)}
+  ul,ol{margin:0 0 1.1em; padding-left:1.25em}
+  li{margin-bottom:.4em}
+  strong{font-weight:700}
+  code{background:#eee9df; padding:.1em .35em; border-radius:5px; font-size:.9em}
+
+  /* ---------- Layout ---------- */
+  .wrap{max-width:1240px; margin:0 auto; padding:0 22px}
+  .shell{display:grid; grid-template-columns:250px minmax(0,1fr); gap:44px; align-items:start; padding-top:44px}
+  nav.toc{
+    position:sticky; top:22px; font-size:.88rem;
+    border-left:2px solid var(--line); padding-left:16px;
+  }
+  nav.toc .toc-title{font-weight:800; text-transform:uppercase; letter-spacing:.09em; font-size:.72rem; color:var(--muted); margin-bottom:12px}
+  nav.toc a{display:block; color:var(--ink-2); text-decoration:none; padding:5px 0; border-bottom:1px dotted transparent}
+  nav.toc a:hover{color:var(--terra); border-bottom-color:var(--line)}
+  nav.toc a.sub{padding-left:12px; font-size:.82rem; color:var(--muted)}
+  @media (max-width:920px){
+    .shell{grid-template-columns:1fr; gap:0; padding-top:24px}
+    nav.toc{position:static; border-left:none; border-top:1px solid var(--line); border-bottom:1px solid var(--line);
+      padding:14px 0; margin-bottom:26px; display:grid; grid-template-columns:1fr 1fr; gap:0 18px}
+    nav.toc .toc-title{grid-column:1/-1}
+  }
+
+  /* ---------- Cover ---------- */
+  .cover{
+    background:
+      radial-gradient(1100px 500px at 85% -10%, rgba(184,67,42,.55), transparent 60%),
+      radial-gradient(700px 400px at 5% 110%, rgba(13,106,91,.45), transparent 60%),
+      linear-gradient(160deg,#0b1620 0%, #101f2b 55%, #16242f 100%);
+    color:#f4f1ea; padding:64px 0 0; position:relative; overflow:hidden;
+  }
+  .cover::after{
+    content:""; position:absolute; inset:0; opacity:.16; pointer-events:none;
+    background-image:linear-gradient(rgba(255,255,255,.5) 1px, transparent 1px),linear-gradient(90deg, rgba(255,255,255,.5) 1px, transparent 1px);
+    background-size:64px 64px; mask-image:radial-gradient(circle at 60% 20%, #000 10%, transparent 70%);
+  }
+  .cover .wrap{position:relative; z-index:2}
+  .kicker{display:inline-flex; align-items:center; gap:10px; font-size:.76rem; letter-spacing:.18em; text-transform:uppercase;
+    font-weight:700; color:#e9cfa9; border:1px solid rgba(233,207,169,.35); padding:7px 13px; border-radius:100px; margin-bottom:26px}
+  .kicker .dot{width:7px; height:7px; border-radius:50%; background:var(--terra); box-shadow:0 0 0 4px rgba(184,67,42,.25)}
+  .cover h1{max-width:19ch}
+  .cover .lede{font-size:clamp(1rem,2vw,1.24rem); color:#c9d3da; max-width:64ch; margin-top:18px}
+  .meta{display:flex; flex-wrap:wrap; gap:10px 26px; margin:30px 0 0; font-size:.84rem; color:#9fb0bc}
+  .meta b{color:#f4f1ea; font-weight:600}
+  .kpis{display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:1px; background:rgba(255,255,255,.12);
+    margin-top:48px; border-top:1px solid rgba(255,255,255,.12)}
+  .kpi{background:rgba(9,18,25,.55); padding:18px 16px 20px}
+  .kpi .v{font-size:1.55rem; font-weight:800; color:#fff; letter-spacing:-.02em}
+  .kpi .l{font-size:.74rem; color:#9fb0bc; line-height:1.35; margin-top:4px}
+  .kpi .s{font-size:.68rem; color:#d9b98d; margin-top:6px; letter-spacing:.02em}
+
+  /* ---------- Sections ---------- */
+  section{padding:52px 0 8px; border-top:1px solid var(--line); margin-top:44px}
+  section:first-of-type{border-top:none; margin-top:0}
+  .sec-num{font-size:.74rem; font-weight:800; letter-spacing:.16em; color:var(--terra); text-transform:uppercase; margin-bottom:10px}
+  .lead{font-size:1.1rem; color:var(--ink-2); max-width:80ch}
+
+  /* ---------- Components ---------- */
+  .grid{display:grid; gap:16px}
+  .g2{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .g3{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .g4{grid-template-columns:repeat(4,minmax(0,1fr))}
+  @media (max-width:860px){ .g2,.g3,.g4{grid-template-columns:1fr} }
+
+  .card{background:var(--card); border:1px solid var(--line); border-radius:var(--radius); padding:20px; box-shadow:var(--shadow)}
+  .card h4{margin-top:0}
+  .card .big{font-size:1.7rem; font-weight:800; letter-spacing:-.02em; margin:.1em 0 .2em}
+
+  .callout{border-radius:var(--radius); padding:18px 20px; margin:22px 0; border-left:4px solid}
+  .callout p:last-child{margin-bottom:0}
+  .callout .ct{font-weight:800; font-size:.78rem; letter-spacing:.12em; text-transform:uppercase; margin-bottom:8px; display:block}
+  .key{background:var(--teal-soft); border-color:var(--teal)} .key .ct{color:var(--teal)}
+  .warn{background:var(--terra-soft); border-color:var(--terra)} .warn .ct{color:var(--terra)}
+  .note{background:var(--gold-soft); border-color:var(--gold)} .note .ct{color:var(--gold)}
+  .idea{background:var(--blue-soft); border-color:var(--blue)} .idea .ct{color:var(--blue)}
+
+  table{width:100%; border-collapse:collapse; font-size:.88rem; margin:18px 0 26px; background:#fff;
+    border:1px solid var(--line); border-radius:10px; overflow:hidden}
+  thead th{background:#101f2b; color:#f2efe8; text-align:left; font-weight:650; font-size:.78rem; letter-spacing:.04em;
+    text-transform:uppercase; padding:11px 12px; vertical-align:bottom}
+  td,tbody th{padding:10px 12px; border-top:1px solid var(--line); vertical-align:top}
+  tbody th{text-align:left; font-weight:650; background:#fbfaf7}
+  tbody tr:nth-child(even) td{background:#fcfbf8}
+  td.num,th.num{text-align:right; font-variant-numeric:tabular-nums; white-space:nowrap}
+  .table-scroll{overflow-x:auto; -webkit-overflow-scrolling:touch}
+  .table-scroll table{min-width:560px}
+  caption{caption-side:bottom; text-align:left; font-size:.78rem; color:var(--muted); padding:8px 2px}
+
+  .badge{display:inline-block; font-size:.68rem; font-weight:800; letter-spacing:.06em; text-transform:uppercase;
+    padding:3px 8px; border-radius:100px; vertical-align:middle; white-space:nowrap}
+  .b-src{background:#e4efe9; color:#0d6a5b}
+  .b-est{background:#faeed3; color:#8a5f0c}
+  .b-hyp{background:#e8eef6; color:#245b8c}
+  .b-risk{background:#f6e4de; color:#b8432a}
+
+  .flow{display:grid; gap:10px; margin:24px 0}
+  .flow .step{background:#fff; border:1px solid var(--line); border-left:4px solid var(--terra); border-radius:10px;
+    padding:13px 16px; font-size:.92rem}
+  .flow .step b{display:block; font-size:.78rem; letter-spacing:.1em; text-transform:uppercase; color:var(--terra); margin-bottom:3px}
+  .arrowdown{text-align:center; color:var(--muted); font-size:1.1rem; line-height:1}
+
+  /* scoring bars */
+  .score{display:grid; grid-template-columns:1fr 52px; gap:10px; align-items:center; font-size:.86rem}
+  .bar{height:9px; border-radius:100px; background:#e9e4da; overflow:hidden}
+  .bar > i{display:block; height:100%; border-radius:100px; background:linear-gradient(90deg,var(--teal),#1f9b84)}
+
+  /* plan cards */
+  .plan{background:#fff; border:1px solid var(--line); border-radius:18px; overflow:hidden; margin:30px 0; box-shadow:var(--shadow)}
+  .plan-head{padding:20px 22px; background:linear-gradient(120deg,#101f2b,#1b3040); color:#f4f1ea; display:flex; flex-wrap:wrap; gap:14px; align-items:center; justify-content:space-between}
+  .plan-head .n{font-size:.72rem; letter-spacing:.16em; text-transform:uppercase; color:#e9cfa9; font-weight:800}
+  .plan-head h3{margin:2px 0 0; font-size:1.35rem; color:#fff}
+  .plan-head .pill{background:rgba(255,255,255,.1); border:1px solid rgba(255,255,255,.22); padding:6px 12px; border-radius:100px; font-size:.76rem}
+  .plan-body{padding:22px}
+  .plan-body h4:first-child{margin-top:0}
+  .kv{display:grid; grid-template-columns:repeat(auto-fit,minmax(120px,1fr)); gap:10px; margin:14px 0 4px}
+  .kv div{background:#fbfaf7; border:1px solid var(--line); border-radius:10px; padding:10px 12px}
+  .kv .k{font-size:.7rem; text-transform:uppercase; letter-spacing:.08em; color:var(--muted)}
+  .kv .v{font-weight:800; font-size:1.02rem; margin-top:2px}
+
+  .checklist{list-style:none; padding:0}
+  .checklist li{position:relative; padding-left:28px; margin-bottom:.55em}
+  .checklist li::before{content:"✓"; position:absolute; left:0; top:0; width:19px; height:19px; border-radius:50%;
+    background:var(--teal-soft); color:var(--teal); font-size:.72rem; font-weight:800; display:grid; place-items:center}
+  .checklist.x li::before{content:"✕"; background:var(--terra-soft); color:var(--terra)}
+
+  .steps{counter-reset:s; list-style:none; padding:0}
+  .steps li{counter-increment:s; position:relative; padding-left:40px; margin-bottom:14px}
+  .steps li::before{content:counter(s); position:absolute; left:0; top:-2px; width:27px; height:27px; border-radius:50%;
+    background:var(--ink); color:#fff; font-size:.82rem; font-weight:800; display:grid; place-items:center}
+
+  .quote{border-left:3px solid var(--gold); padding:6px 0 6px 16px; color:var(--ink-2); font-style:italic; margin:18px 0}
+  .srcs{font-size:.8rem; color:var(--muted)}
+  .srcs li{margin-bottom:.3em}
+
+  footer{margin-top:60px; background:#0b1620; color:#9fb0bc; padding:34px 0 40px; font-size:.86rem}
+  footer a{color:#e9cfa9}
+  .print-btn{position:fixed; right:18px; bottom:18px; z-index:50; background:var(--terra); color:#fff; border:none;
+    border-radius:100px; padding:12px 18px; font-weight:700; font-size:.86rem; box-shadow:0 8px 24px rgba(0,0,0,.25); cursor:pointer}
+  @media print{
+    body{background:#fff; font-size:11pt}
+    nav.toc,.print-btn{display:none}
+    .shell{display:block; padding-top:0}
+    .cover{background:#101f2b !important; -webkit-print-color-adjust:exact; print-color-adjust:exact}
+    section{page-break-inside:auto; padding-top:26px; margin-top:26px}
+    .plan,.card,table{page-break-inside:avoid}
+    h2,h3{page-break-after:avoid}
+    a{color:inherit; text-decoration:none}
+  }
+</style>
+</head>
+<body>
+
+<header class="cover">
+  <div class="wrap">
+    <span class="kicker"><span class="dot"></span>Étude de marché &amp; plan d'action · Octobre 2026</span>
+    <h1>Madagascar &amp; Antananarivo : où sont les vraies opportunités</h1>
+    <p class="lede">Diagnostic de la situation, cartographie des problèmes majeurs, analyse du marché de la capitale, et 10 business rentables classés — dont 4 chiffrés au niveau de l'ariary, avec un plan de lancement en 30 jours.</p>
+    <div class="meta">
+      <span><b>Périmètre</b> Madagascar · Grand Antananarivo</span>
+      <span><b>Devise de travail</b> 1 € ≈ 4 800 Ar <span class="badge b-hyp">hypothèse</span></span>
+      <span><b>Rédaction</b> 30 octobre 2026</span>
+    </div>
+    <div class="kpis">
+      <div class="kpi"><div class="v">33,5 M</div><div class="l">habitants, +2,4 à 2,7 %/an</div><div class="s">croissance démographique</div></div>
+      <div class="kpi"><div class="v">3,6 %</div><div class="l">croissance du PIB 2026 (FMI)</div><div class="s">insuffisante vs démographie</div></div>
+      <div class="kpi"><div class="v">66,5 %</div><div class="l">de la population sous le seuil de pauvreté</div><div class="s">Banque mondiale, 2025</div></div>
+      <div class="kpi"><div class="v">144 000 m³</div><div class="l">déficit d'eau potable par jour à Tana</div><div class="s">ministère de l'Eau, 2026</div></div>
+      <div class="kpi"><div class="v">1 300 t</div><div class="l">de déchets collectés chaque jour dans la capitale</div><div class="s">SMA, 2026</div></div>
+      <div class="kpi"><div class="v">40 M$</div><div class="l">perdus chaque année dans les embouteillages</div><div class="s">Banque mondiale</div></div>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="shell">
+    <nav class="toc">
+      <div class="toc-title">Sommaire</div>
+      <a href="#synthese">Synthèse en 7 points</a>
+      <a href="#madagascar">1. Madagascar : état des lieux</a>
+      <a href="#tana">2. Antananarivo : le vrai terrain de jeu</a>
+      <a href="#probleme">3. Le problème majeur</a>
+      <a href="#marche">4. Analyse du marché</a>
+      <a href="#opportunites" class="sub">Taille des marchés</a>
+      <a href="#opportunites">5. 10 opportunités classées</a>
+      <a href="#plans">6. Les 4 business chiffrés</a>
+      <a href="#action">7. Plan d'action 90 jours</a>
+      <a href="#financement" class="sub">Financement</a>
+      <a href="#risques" class="sub">Risques &amp; erreurs fatales</a>
+      <a href="#annexes">Annexes &amp; sources</a>
+    </nav>
+
+    <main>
+
+    <!-- ============ SYNTHESE ============ -->
+    <section id="synthese">
+      <div class="sec-num">Synthèse exécutive</div>
+      <h2>Ce que dit cette étude, en 7 points</h2>
+
+      <div class="callout key">
+        <span class="ct">La thèse centrale</span>
+        <p><strong>À Antananarivo, le problème n'est pas l'absence de demande : c'est l'effondrement des services de base.</strong> Les habitants et les entreprises paient déjà très cher des solutions privées de remplacement — un bidon d'eau à 3 000 Ar au lieu de 500 Ar, un taxi-moto deux à trois fois le prix normal pour ne pas être en retard, un groupe électrogène ou un kit solaire pour tenir pendant les coupures. <strong>Chaque pénurie est déjà un marché.</strong> L'opportunité consiste à fournir la même chose, mais de façon fiable, régulière, mesurable et moins chère que le coût actuel de la pénurie.</p>
+      </div>
+
+      <ol class="steps">
+        <li><strong>La croissance existe mais elle n'enrichit pas.</strong> +3,6 % de PIB en 2026 pour +2,4 à 2,7 % de population, avec 8,3 % d'inflation : le pouvoir d'achat recule. Le marché intérieur solvable est donc <em>étroit, concentré dans la capitale et très sensible au prix</em>.</li>
+        <li><strong>Le vrai goulot d'étranglement est physique, pas commercial.</strong> Eau (déficit de 144 000 m³/jour), électricité (délestages de 2 à 3 h), froid, mobilité (40 M$/an perdus), déchets (1 300 t/jour). Ces cinq goulets créent des dépenses forcées et récurrentes.</li>
+        <li><strong>Trois portes d'entrée seulement</strong> : (a) <em>pallier la pénurie</em>, (b) <em>capter de la devise</em> (export de services, diaspora, tourisme), (c) <em>compresser le coût de la vie</em> (production locale, achats groupés, distribution).</li>
+        <li><strong>Le meilleur ratio risque / capital est l'export de services numériques.</strong> À capital quasi nul (~1,5 M Ar), un binôme de développeurs malgaches facture 700 à 1 200 €/mois par client européen, tout en coûtant 900 000 à 1 800 000 Ar/mois. Rentabilité atteignable en moins de 2 mois.</li>
+        <li><strong>Le plus gros marché local est l'eau et le froid</strong> — mais ce sont des business de <em>densité</em> : la marge unitaire est faible, tout se joue sur le nombre de clients par tournée. À ne lancer qu'avec un modèle d'abonnement et des clients B2B.</li>
+        <li><strong>Le piège classique à Tana : investir dans le matériel avant d'avoir des clients.</strong> Matériel importé, stock immobilisé, ariary qui bouge, coupures qui paralysent : le capital de départ doit financer le <em>lancement commercial</em>, pas le stock.</li>
+        <li><strong>La règle d'or : vendez à celui qui a déjà un budget.</strong> B2B (restaurants, cliniques, hôtels, écoles, ONG, sociétés), diaspora, expatriés et 10 % les plus aisés — avant de viser le consommateur moyen, dont le pouvoir d'achat se contracte.</li>
+      </ol>
+
+      <div class="grid g3" style="margin-top:26px">
+        <div class="card">
+          <h4>Capital</h4>
+          <div class="big">0 – 25 M Ar</div>
+          <p style="margin:0">Cinq des dix opportunités démarrent avec moins de 2 M Ar. Trois dépassent 10 M Ar mais peuvent être financées par acomptes clients.</p>
+        </div>
+        <div class="card">
+          <h4>Délai jusqu'au 1<sup>er</sup> ariary</h4>
+          <div class="big">7 – 60 jours</div>
+          <p style="margin:0">Services : 1 à 3 semaines. Eau, livraison, formation : 3 à 8 semaines. Production animale ou déchets : 3 à 6 mois.</p>
+        </div>
+        <div class="card">
+          <h4>Rentabilité nette observée</h4>
+          <div class="big">20 – 55 %</div>
+          <p style="margin:0">Du plus faible (achats groupés, 6–10 % de marge brute) au plus élevé (services numériques export, 50–65 % net).</p>
+        </div>
+      </div>
+
+      <p style="margin-top:22px" class="srcs">Toutes les projections financières de ce rapport sont des <strong>estimations de travail</strong> construites sur des prix de marché 2026 et des hypothèses explicitées. Elles doivent être validées localement avant tout engagement (voir la checklist en annexe A). Les données macro et sectorielles sont sourcées et datées en annexe C.</p>
+    </section>
+
+    <!-- ============ 1. MADAGASCAR ============ -->
+    <section id="madagascar">
+      <div class="sec-num">Partie 1</div>
+      <h2>Madagascar : état des lieux 2026</h2>
+      <p class="lead">Un pays jeune, riche en ressources, mais pris dans un cercle où la croissance économique ne suit pas la démographie, où l'État ne finance plus les services de base, et où la confiance institutionnelle est le principal actif manquant.</p>
+
+      <h3>1.1 Les chiffres qui comptent</h3>
+      <div class="table-scroll">
+      <table>
+        <thead><tr><th>Indicateur</th><th class="num">Valeur 2026</th><th>Lecture business</th><th>Source</th></tr></thead>
+        <tbody>
+          <tr><th>Population</th><td class="num">≈ 33,5 M</td><td>Croissance +2,4 à 2,7 %/an : ~800 000 nouveaux consommateurs par an, mais surtout des clients à très faible pouvoir d'achat.</td><td>BM / FMI</td></tr>
+          <tr><th>PIB nominal</th><td class="num">≈ 21,2 Md$</td><td>Un marché intérieur de la taille d'une ville européenne moyenne, pour 33 millions d'habitants.</td><td>FMI (WEO 2026)</td></tr>
+          <tr><th>PIB par habitant</th><td class="num">≈ 650 $</td><td>≈ 54 $/mois en moyenne nationale : le prix est le premier critère d'achat.</td><td>FMI</td></tr>
+          <tr><th>Croissance réelle</th><td class="num">3,6 %</td><td>En dessous de la moyenne Afrique subsaharienne (~4,3 %) et de l'objectif budgétaire de 4,8 %.</td><td>FMI</td></tr>
+          <tr><th>Inflation</th><td class="num">8,3 %</td><td>Érosion du pouvoir d'achat : un business doit pouvoir augmenter ses prix sans perdre ses clients.</td><td>FMI / BM</td></tr>
+          <tr><th>Taux directeur</th><td class="num">12 %</td><td>Crédit cher : le financement bancaire n'est pas un plan de démarrage, tout au plus un accélérateur.</td><td>BFM</td></tr>
+          <tr><th>Pauvreté</th><td class="num">66,5 %</td><td>Deux tiers de la population hors du marché solvable classique : segmenter est vital.</td><td>Banque mondiale (2025)</td></tr>
+          <tr><th>Capital humain</th><td class="num">0,39</td><td>Parmi les plus faibles au monde : la formation est rare, donc vendable.</td><td>Banque mondiale</td></tr>
+          <tr><th>SMIG</th><td class="num">300 000 Ar/mois</td><td>≈ 62 € : la main-d'œuvre non qualifiée reste très compétitive à l'export.</td><td>Conseil national du travail, mars 2026</td></tr>
+          <tr><th>Salaire médian réel</th><td class="num">≈ 108 000 Ar</td><td>La moitié des actifs gagne ~22 €/mois : les business B2C doivent viser des micro-prix ou du volume.</td><td>Estimations 2026</td></tr>
+          <tr><th>Transferts de la diaspora</th><td class="num">≈ 6 % du PIB</td><td>≈ 1,2 Md$ par an : une clientèle qui paie en devise, pour de la construction, de la santé, de l'éducation.</td><td>BM / analyse secteur financier</td></tr>
+          <tr><th>Déficit budgétaire</th><td class="num">4,7 % du PIB</td><td>Marge de manœuvre de l'État très faible : les infrastructures ne seront pas réparées par le budget public à court terme.</td><td>Prévisions 2026</td></tr>
+        </tbody>
+        <caption><span class="badge b-src">sourcé</span> Données macro 2026 ; taux de change retenu : 1 € ≈ 4 800 Ar (hypothèse de travail, à réactualiser — l'ariary a connu des mouvements de 8 à 11 % en 2026).</caption>
+      </table>
+      </div>
+
+      <h3>1.2 Un modèle économique fragile et dépendant des importations</h3>
+      <p>L'économie repose sur quatre piliers : l'<strong>agriculture</strong> (vanille, girofle, litchi, cacao, riz), les <strong>mines</strong> (ilménite, nickel-cobalt, graphite), les <strong>zones franches textiles</strong> et le <strong>tourisme</strong>. Ces filières génèrent des devises mais peu d'emplois formels et restent vulnérables aux prix mondiaux et au climat.</p>
+      <p>En face, le pays importe l'essentiel de ce qu'il consomme en ville : <strong>riz</strong> (≈ 850 000 t/an projetées, soit plus de 2 200 milliards d'ariary), <strong>carburants</strong> (100 % importés, essence à 5 300 Ar/L et gasoil à 4 860 Ar/L début septembre 2026), <strong>médicaments</strong>, <strong>matériaux de construction</strong> et <strong>biens d'équipement</strong>. Chaque mouvement du pétrole ou de l'ariary se répercute immédiatement sur les prix intérieurs. <span class="badge b-src">sourcé</span></p>
+
+      <div class="callout note">
+        <span class="ct">Conséquence pour un entrepreneur</span>
+        <p>Un business qui <strong>importe</strong> subit le risque de change et les délais portuaires. Un business qui <strong>exporte des services</strong> ou <strong>produit localement</strong> en profite. C'est un critère de choix au moins aussi important que la marge.</p>
+      </div>
+
+      <h3>1.3 Le contexte politique : un risque à intégrer, pas un prétexte pour ne rien faire</h3>
+      <p>Depuis octobre 2025, Madagascar est dirigé par une transition militaire issue de la chute du président Andry Rajoelina, après trois semaines de manifestations déclenchées… par les coupures d'eau et d'électricité. Le colonel Michaël Randrianirina a été investi « président de la refondation », l'Union africaine a suspendu le pays, et un scrutin présidentiel est annoncé pour fin 2027, après référendum constitutionnel. <span class="badge b-src">sourcé</span></p>
+      <div class="grid g2">
+        <div class="card">
+          <h4>Ce que cela change pour un business</h4>
+          <ul style="margin-bottom:0">
+            <li>Les <strong>marchés publics et ONG</strong> restent les payeurs les plus sûrs, mais les procédures peuvent se bloquer.</li>
+            <li>Les <strong>investissements étrangers</strong> hésitent : le capital local et la diaspora deviennent la première source de financement.</li>
+            <li>La <strong>fiscalité et les priorités</strong> peuvent bouger vite : structures légères, contrats courts, pas de dépendance à un seul donneur d'ordre public.</li>
+            <li>La <strong>confiance</strong> est la ressource la plus rare : elle se construit par la preuve (photos, reçus, garanties, témoignages).</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h4>Ce qui ne change pas</h4>
+          <ul style="margin-bottom:0">
+            <li>Les gens boivent, mangent, se logent, se soignent et se déplacent <strong>tous les jours</strong>.</li>
+            <li>Les pénuries d'eau et d'électricité <strong>s'aggravent</strong>, quelle que soit l'autorité au pouvoir.</li>
+            <li>Le mobile money et Facebook restent les <strong>infrastructures commerciales réelles</strong> du pays.</li>
+            <li>Les prix alimentaires et le coût de la vie restent <strong>le premier sujet de colère sociale</strong> — donc le premier marché.</li>
+          </ul>
+        </div>
+      </div>
+
+      <h3>1.4 Climat et saisonnalité : le calendrier qui décide de votre trésorerie</h3>
+      <div class="table-scroll">
+      <table>
+        <thead><tr><th>Période</th><th>Ce qui se passe</th><th>Impact business</th></tr></thead>
+        <tbody>
+          <tr><th>Déc. – mars</th><td>Saison des pluies et des cyclones. Déchets jusqu'à 2 000 t/jour à Tana, routes coupées, inondations.</td><td>Pic de demande : eau, assainissement, réparation, bâches, pompes. Mais baisse d'activité, impayés et logistique perturbée : prévoir 2 mois de trésorerie.</td></tr>
+          <tr><th>Avril – juin</th><td>Récoltes de riz, rentrée scolaire en septembre mais préparation des budgets dès mai.</td><td>Meilleure période pour lancer et vendre : routes praticables, ménages et entreprises arbitrent leurs dépenses.</td></tr>
+          <tr><th>Juillet – août</th><td>Haute saison touristique, pic de mariages et de cérémonies (famadihana).</td><td>Demande forte : traiteur, location de matériel, transport, hébergement, photo, habillement.</td></tr>
+          <tr><th>Sept. – nov.</th><td>Étiage : baisse de production hydroélectrique, délestages accentués, coupures d'eau.</td><td>Pic de demande pour solaire, onduleurs, eau, froid. C'est la fenêtre commerciale de l'énergie et de l'eau.</td></tr>
+          <tr><th>Nov. – déc.</th><td>Fêtes de fin d'année, achats de riz et de viande, primes.</td><td>Pic de consommation alimentaire : bon moment pour l'agroalimentaire et les achats groupés.</td></tr>
+        </tbody>
+      </table>
+      </div>
+    </section>
+
+    <!-- ============ 2. ANTANANARIVO ============ -->
+    <section id="tana">
+      <div class="sec-num">Partie 2</div>
+      <h2>Antananarivo : le vrai terrain de jeu</h2>
+      <p class="lead">La capitale concentre environ 8 % de la population mais l'essentiel du pouvoir d'achat formel, des administrations, des sièges d'entreprise, des ONG et des bailleurs. C'est aussi la ville où les cinq goulets d'infrastructure font le plus mal — donc celle où la volonté de payer pour les contourner est la plus forte.</p>
+
+      <div class="grid g4" style="margin:24px 0 8px">
+        <div class="card"><h4>Population</h4><div class="big">≈ 2,57 M</div><p style="margin:0;font-size:.9rem">+3,97 %/an, soit ≈ 98 000 habitants de plus chaque année. L'une des villes à la plus forte croissance d'Afrique.</p></div>
+        <div class="card"><h4>Déficit d'eau</h4><div class="big">144 000 m³/j</div><p style="margin:0;font-size:.9rem">Soit l'équivalent de la consommation quotidienne de plusieurs centaines de milliers de personnes.</p></div>
+        <div class="card"><h4>Déchets</h4><div class="big">1 300 t/j</div><p style="margin:0;font-size:.9rem">Jusqu'à 2 000 t/j en saison des pluies ; coût de l'assainissement ≈ 1 Md Ar/mois.</p></div>
+        <div class="card"><h4>Congestion</h4><div class="big">40 M$/an</div><p style="margin:0;font-size:.9rem">0,34 % du PIB perdu ; la ville est classée 134<sup>e</sup> sur 150 grandes villes mondiales.</p></div>
+      </div>
+
+      <h3>2.1 L'eau : le problème numéro un, et le marché le plus évident</h3>
+      <p>La capitale vit au rythme des « tours d'eau » de la JIRAMA. La ministre de l'Eau a reconnu en mai 2026 un <strong>déficit de production de 144 000 m³ par jour</strong>. Les causes sont cumulatives : production insuffisante, réseau vétuste (157 fuites recensées sur un tronçon de 195 km, 64 km de conduites à remplacer), pression mal répartie, et quartiers en hauteur structurellement mal desservis.</p>
+      <p>Les conséquences économiques sont directes et documentées :</p>
+      <ul>
+        <li>Le prix du <strong>bidon d'eau passe de 500 à 3 000 ariary</strong> en période de pénurie — soit une multiplication par six qui capte le budget des ménages. <span class="badge b-src">sourcé</span></li>
+        <li>Les commerçants perdent des heures d'activité : « je passe des heures à attendre l'eau, et pendant ce temps je ne travaille pas » (témoignage d'un gérant d'épicerie, mai 2026).</li>
+        <li>Les quartiers touchés en 2026 incluent la Haute-Ville, Faravohitra, Ambatonakanga, Antaninarenina, Mahamasina, Behoririka, Ankadifotsy, Manjakaray, Anjanahary, Amboditsiry, Ankatso, Andraisoro, Alasora… <span class="badge b-src">sourcé</span></li>
+      </ul>
+      <div class="callout idea">
+        <span class="ct">Lecture business</span>
+        <p>Le marché de l'eau à Tana n'est pas un marché à créer : il existe déjà, informel, cher et mal servi. Trois modèles sont viables : <strong>la livraison par abonnement</strong> (B2C + B2B), le <strong>kiosque de quartier</strong> (volume, prix bas) et l'<strong>équipement d'autonomie</strong> (cuves, surpresseurs, filtres — ticket élevé, marge ponctuelle). Le détail chiffré est en partie 6, plan C.</p>
+      </div>
+
+      <h3>2.2 L'électricité et le froid : la deuxième dépense forcée</h3>
+      <p>Les délestages reviennent par vagues : 2 à 3 heures par jour, parfois plus, avec des annonces de travaux (16 au 22 octobre 2026 : onze quartiers concernés). L'étiage de septembre à novembre réduit la production hydroélectrique et aggrave la situation. Pour un commerce, chaque coupure est une perte : chaîne du froid rompue, client parti, service interrompu.</p>
+      <div class="table-scroll">
+      <table>
+        <thead><tr><th>Besoins typiques</th><th>Solution actuelle du marché</th><th>Coût indicatif</th><th>Faiblesse exploitable</th></tr></thead>
+        <tbody>
+          <tr><th>Épicerie, bar, gargote</th><td>Groupe électrogène, onduleur, bougies</td><td>Carburant 5 300 Ar/L ; groupe 1,5–4 M Ar</td><td>Bruit, panne, carburant cher, pas de froid continu</td></tr>
+          <tr><th>Pharmacie, clinique</th><td>Groupe + congélateur à médicaments</td><td>5–15 M Ar</td><td>Aucune maintenance préventive, risque de rupture de chaîne</td></tr>
+          <tr><th>Ménage urbain</th><td>Kit solaire d'entrée de gamme</td><td>1–3 M Ar ; panneau 550 W ≈ 520 000 Ar</td><td>Installations mal dimensionnées, batteries de mauvaise qualité</td></tr>
+          <tr><th>Bureau, cyber, école</th><td>Onduleur, solaire hybride</td><td>2–10 M Ar</td><td>Aucun contrat de service : panne = arrêt total</td></tr>
+        </tbody>
+      </table>
+      </div>
+
+      <h3>2.3 La mobilité : une taxe invisible sur toute l'économie</h3>
+      <p>Deux heures de trajet par jour, des heures de pointe qui s'étirent de l'aube à la fin de matinée, des travaux qui rallongent les itinéraires (quinze lignes de taxi-be concernées fin octobre 2026). Coût estimé par la Banque mondiale : <strong>40 millions de dollars par an</strong>, soit 0,34 % du PIB national. Les usagers arbitrent en payant : le taxi-moto coûte « deux à trois fois le prix normal » quand il faut arriver à l'heure. <span class="badge b-src">sourcé</span></p>
+      <p>Ce que cela signifie concrètement : <strong>le temps est devenu une marchandise</strong> à Tana. Toute offre qui restitue du temps (livraison, courses, services à domicile, télétravail, coworking de proximité) trouve preneur, même auprès de clients modestes.</p>
+
+      <h3>2.4 Les déchets : un coût public… et une matière première gratuite</h3>
+      <p>La Société municipale d'assainissement collecte 1 300 t/jour avec un taux de ramassage de 80 à 85 %, pour un coût d'environ 1 milliard d'ariary par mois. Le financement est fragile : la redevance sur les ordures ménagères, prélevée avec l'impôt foncier, a un taux de recouvrement très faible. Les dispositifs de quartier (type RF2) demandent 2 000 Ar/mois par ménage, avec environ 60 % d'adhésion. <span class="badge b-src">sourcé</span></p>
+      <p>Or 60 à 70 % de ces déchets sont <strong>organiques</strong> : restes de marché (Anosibe en particulier), épluchures, invendus. Ce qui est un problème de collecte est, pour un entrepreneur, une <strong>matière première gratuite</strong> : compost pour le maraîchage périurbain, larves de mouche soldat noire pour l'alimentation des poulets et des poissons.</p>
+
+      <h3>2.5 Logement, foncier et construction</h3>
+      <p>Le prix moyen est d'environ 615 €/m² dans le centre et 468 €/m² en périphérie. Un studio se loue de 400 000 à 1 200 000 Ar/mois, un T2 meublé de 1 400 000 à 3 200 000 Ar. La construction reste largement informelle, avec des finitions médiocres et une forte sensibilité à l'eau (toitures, étanchéité, évacuation). <span class="badge b-src">sourcé</span></p>
+      <p>Deux clientèles solvables se détachent : la <strong>diaspora</strong> qui fait construire ou louer au pays sans pouvoir surveiller le chantier, et la <strong>classe moyenne urbaine</strong> qui rénove. Les deux achètent de la <em>confiance</em> autant que des matériaux.</p>
+
+      <h3>2.6 Commerce, numérique et moyens de paiement</h3>
+      <div class="grid g2">
+        <div class="card">
+          <h4>La réalité du commerce</h4>
+          <ul style="margin-bottom:0">
+            <li>Les marchés physiques restent centraux : Analakely, Anosibe, Behoririka, Mahamasina, Andravoahangy.</li>
+            <li>Les épiceries de quartier sont le dernier kilomètre de la grande distribution.</li>
+            <li><strong>Facebook et WhatsApp sont l'annuaire, la vitrine et le service client</strong> du pays.</li>
+            <li>Les délais de paiement B2B sont longs : la trésorerie tue plus d'entreprises que la concurrence.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h4>La réalité du numérique</h4>
+          <ul style="margin-bottom:0">
+            <li>21,8 M d'abonnements mobiles (66,2 % de pénétration), mais seulement <strong>20,4 % d'utilisateurs d'internet</strong> et 24 % de détenteurs de smartphone. <span class="badge b-src">sourcé</span></li>
+            <li>≈ 15 M de comptes de mobile money ; MVola revendique ~4 M d'utilisateurs actifs, 60 000 points de cash et 50 000 marchands.</li>
+            <li>Les tarifs data ont baissé fin 2025 : chez Orange, 1 Go à 1 000 Ar/24 h, 3 Go à 5 000 Ar/7 jours, 20 Go à 30 000 Ar/30 jours (octobre 2026). <span class="badge b-src">sourcé</span></li>
+            <li>La 4G couvre environ 80 % du territoire : le problème n'est plus la couverture mais le <strong>prix du terminal et l'usage</strong>.</li>
+          </ul>
+        </div>
+      </div>
+
+      <h3>2.7 Les dix chiffres qui définissent le marché de la capitale</h3>
+      <div class="table-scroll">
+      <table>
+        <thead><tr><th>#</th><th>Fait</th><th>Ce que cela implique pour un business</th></tr></thead>
+        <tbody>
+          <tr><th>1</th><td>2,57 M d'habitants, +4 %/an</td><td>Un marché qui double tous les 18 ans : la demande de base ne s'arrête jamais.</td></tr>
+          <tr><th>2</th><td>Déficit d'eau de 144 000 m³/jour</td><td>L'eau est une évidence commerciale, à condition de tenir la logistique.</td></tr>
+          <tr><th>3</th><td>Délestages de 2 à 3 h</td><td>Le solaire et le froid de secours se vendent sur la peur de perdre, pas sur l'écologie.</td></tr>
+          <tr><th>4</th><td>2 h de transport par jour</td><td>Le temps perdu est un budget disponible pour la livraison et les services à domicile.</td></tr>
+          <tr><th>5</th><td>1 300 t de déchets/jour</td><td>Matière première gratuite pour le compost et l'alimentation animale.</td></tr>
+          <tr><th>6</th><td>Riz local à 2 500–2 800 Ar/kg</td><td>L'alimentaire est le premier poste de dépense : la marge est faible mais le volume énorme.</td></tr>
+          <tr><th>7</th><td>SMIG 300 000 Ar, médiane 108 000 Ar</td><td>Le B2C doit viser des prix unitaires bas ; le B2B des paniers moyens élevés.</td></tr>
+          <tr><th>8</th><td>Loyer commercial 300 000 – 1 500 000 Ar</td><td>Le local est un poste fixe lourd : privilégier la location d'appoint ou le modèle sans local.</td></tr>
+          <tr><th>9</th><td>Mobile money omniprésent</td><td>Encaissement instantané, mais plafonds à surveiller (≈ 10 M Ar/jour en réception).</td></tr>
+          <tr><th>10</th><td>Diaspora ≈ 6 % du PIB</td><td>Une clientèle solvable, exigeante, qui paie en devise pour du service et de la preuve.</td></tr>
+        </tbody>
+      </table>
+      </div>
+    </section>
+
+    <!-- ============ 3. PROBLEME ============ -->
+    <section id="probleme">
+      <div class="sec-num">Partie 3</div>
+      <h2>Le problème majeur : un cercle vicieux en cinq temps</h2>
+      <p class="lead">Le blocage malgache n'est ni la paresse ni le manque d'idées. C'est un cercle auto-entretenu où la défaillance des services publics détruit le pouvoir d'achat, ce qui réduit la base fiscale, ce qui empêche de réparer les services publics.</p>
+
+      <div class="flow">
+        <div class="step"><b>1 · Défaillance des services de base</b>Eau, électricité, transport, assainissement : l'État et les régies ne suivent plus la croissance urbaine.</div>
+        <div class="arrowdown">↓</div>
+        <div class="step"><b>2 · Substitution privée coûteuse</b>Ménages et entreprises achètent des solutions de remplacement : bidons, groupes électrogènes, citernes, taxi-moto, forages. Cette dépense est <em>improductive</em>.</div>
+        <div class="arrowdown">↓</div>
+        <div class="step"><b>3 · Érosion du pouvoir d'achat</b>Ce budget ne va ni à l'éducation, ni à la santé, ni à l'épargne. L'inflation de 8,3 % amplifie l'effet.</div>
+        <div class="arrowdown">↓</div>
+        <div class="step"><b>4 · Informalisation</b>Pour survivre, l'activité reste non déclarée : pas de crédit, pas d'assurance, pas de marché public, pas de croissance.</div>
+        <div class="arrowdown">↓</div>
+        <div class="step"><b>5 · Base fiscale étroite</b>Moins de recettes, moins d'investissement, donc retour au point 1 — et la colère sociale de septembre 2025.</div>
+      </div>
+
+      <div class="callout warn">
+        <span class="ct">Le point de rupture exploitable</span>
+        <p>Chaque étape du cercle est aussi un <strong>point d'entrée économique</strong>. Une entreprise peut casser le cercle localement, sans attendre l'État : en fournissant un service fiable à un prix inférieur au <em>coût total</em> de la pénurie (temps perdu + eau achetée plus cher + stock gâché + déplacement). C'est exactement le modèle qui a fait le succès des opérateurs de mobile money ou des solutions solaires en Afrique de l'Est.</p>
+      </div>
+
+      <h3>3.1 Les cinq goulets, traduits en marchés</h3>
+      <div class="table-scroll">
+      <table>
+        <thead><tr><th>Goulet</th><th>Preuve chiffrée</th><th>Ce que les gens dépensent déjà</th><th>Marché de substitution</th></tr></thead>
+        <tbody>
+          <tr><th>Eau</th><td>Déficit de 144 000 m³/j ; bidon ×6 en pénurie</td><td>1 500 à 3 000 Ar par bidon de 20 L ; citernes ; forages privés</td><td>Livraison, kiosques, filtration, cuves, pompes</td></tr>
+          <tr><th>Énergie &amp; froid</th><td>Délestages 2–3 h ; étiage</td><td>Groupes électrogènes, carburant, solaire d'appoint, glace</td><td>Solaire, onduleurs, froid, maintenance, leasing</td></tr>
+          <tr><th>Mobilité</th><td>2 h/jour ; 40 M$/an perdus</td><td>Taxi-moto 2–3× le tarif, taxis, carburant</td><td>Livraison, coursiers, transport de personnel</td></tr>
+          <tr><th>Déchets</th><td>1 300 t/j ; 1 Md Ar/mois</td><td>Redevances, prestataires, « arrangements » locaux</td><td>Collecte, compost, recyclage, assainissement</td></tr>
+          <tr><th>Coût de la vie</th><td>8,3 % d'inflation ; riz 2 500–2 800 Ar/kg</td><td>Alimentation = premier poste du budget</td><td>Achats groupés, production locale, transformation</td></tr>
+        </tbody>
+      </table>
+      </div>
+
+      <h3>3.2 Taille indicative des marchés (estimations de travail)</h3>
+      <p>Les chiffres ci-dessous sont des ordres de grandeur construits « par le bas » à partir des données publiques. Ils servent à comparer les opportunités entre elles, pas à servir de business plan.</p>
+      <div class="table-scroll">
+      <table>
+        <thead><tr><th>Marché</th><th>Méthode de calcul</th><th class="num">Volume annuel estimé</th><th>Confiance</th></tr></thead>
+        <tbody>
+          <tr><th>Eau livrée à domicile (Tana)</th><td>≈ 514 000 ménages × 40 % acheteurs × 2 bonbonnes/semaine × 2 000 Ar</td><td class="num">≈ 43 Md Ar<br><small>≈ 9 M€</small></td><td><span class="badge b-est">estimation</span></td></tr>
+          <tr><th>Solaire &amp; secours électrique (Tana)</th><td>≈ 60 000 commerces × 10 % équipés/an × 3,5 M Ar</td><td class="num">≈ 21 Md Ar<br><small>≈ 4,4 M€</small></td><td><span class="badge b-est">estimation</span></td></tr>
+          <tr><th>Livraison urbaine</th><td>Coût de la congestion 40 M$ + dépenses privées de coursier (non mesurées)</td><td class="num">&gt; 200 Md Ar de coût induit</td><td><span class="badge b-est">estimation</span></td></tr>
+          <tr><th>Valorisation des déchets organiques</th><td>1 300 t/j × 60 % d'organique × 300 j × 150 Ar/kg de compost</td><td class="num">≈ 35 Md Ar<br><small>≈ 7 M€</small></td><td><span class="badge b-est">estimation</span></td></tr>
+          <tr><th>Substitution du riz importé</th><td>≈ 850 000 t/an × 2 600 Ar/kg</td><td class="num">&gt; 2 200 Md Ar<br><small>≈ 460 M€</small></td><td><span class="badge b-src">volumes sourcés</span></td></tr>
+          <tr><th>Tourisme (national)</th><td>400 000 visiteurs visés × ~1 100 $ de recette moyenne</td><td class="num">≈ 440 M$</td><td><span class="badge b-src">objectif public</span></td></tr>
+          <tr><th>Export de services numériques</th><td>Tarifs marché : 700–1 500 €/mois par développeur facturé</td><td class="num">Croissance à deux chiffres</td><td><span class="badge b-hyp">tendance</span></td></tr>
+        </tbody>
+        <caption>Hypothèses : 1 € = 4 800 Ar ; 5 personnes par ménage ; 300 jours d'activité. Ces montants mesurent une <em>dépense</em>, pas un chiffre d'affaires capturable : votre part de marché dépendra de votre capacité d'exécution locale.</caption>
+      </table>
+      </div>
+
+      <div class="callout key">
+        <span class="ct">Le principe à retenir</span>
+        <p>Ne cherchez pas à créer un besoin. Cherchez la dépense que le client fait <strong>déjà</strong>, et proposez-lui la même chose en plus fiable, plus simple ou moins cher. C'est la seule façon de vendre vite dans un marché où le pouvoir d'achat baisse.</p>
+      </div>
+    </section>
+
+    <!-- ============ 4. MARCHE ============ -->
+    <section id="marche">
+      <div class="sec-num">Partie 4</div>
+      <h2>Analyse du marché : qui paie, combien, et comment</h2>
+      <p class="lead">À Madagascar, la question n'est pas « combien de clients existent ? » mais « combien de clients ont un budget ce mois-ci ? ». La réponse change tout : elle impose de segmenter, de choisir ses canaux et de protéger sa trésorerie.</p>
+
+      <h3>4.1 Les cinq segments qui ont réellement de l'argent</h3>
+      <div class="table-scroll">
+      <table>
+        <thead><tr><th>Segment</th><th>Taille indicative</th><th>Ce qu'il achète</th><th>Panier / fréquence</th><th>Comment l'atteindre</th></tr></thead>
+        <tbody>
+          <tr><th>A. Diaspora</th><td>Quelques centaines de milliers de personnes, ≈ 6 % du PIB en transferts</td><td>Construction, rénovation, santé des parents, scolarité, gestion locative</td><td>2 à 15 M Ar par projet, 1 à 2 fois/an</td><td>Groupes Facebook de la diaspora, WhatsApp, bouche-à-oreille familial, prestataires de confiance</td></tr>
+          <tr><th>B. Entreprises &amp; institutions</th><td>Quelques milliers de PME + ONG, bailleurs, cliniques, hôtels, écoles</td><td>Services récurrents, maintenance, fournitures, formation, sécurité, logistique</td><td>500 000 à 20 M Ar/mois</td><td>Appels d'offres, réseaux professionnels, recommandations, démonstration</td></tr>
+          <tr><th>C. Top 10 % urbain</th><td>≈ 250 000 personnes dans le Grand Tana</td><td>Confort, santé, éducation privée, équipement domestique, restauration</td><td>200 000 à 3 M Ar par achat</td><td>Facebook/Instagram, bouche-à-oreille, adresses premium</td></tr>
+          <tr><th>D. Classe moyenne émergente</th><td>Ménages à 800 000 – 2 500 000 Ar/mois</td><td>Électroménager, solaire, eau, livraison, formation, petit crédit</td><td>50 000 à 600 000 Ar, mensuel</td><td>WhatsApp, groupes de quartier, mobile money, églises et associations</td></tr>
+          <tr><th>E. Base de la pyramide</th><td>Majorité de la population</td><td>Eau, alimentation, transport, recharges téléphoniques</td><td>500 à 20 000 Ar, quotidien</td><td>Points de vente de proximité, marchés, kiosques, agents</td></tr>
+        </tbody>
+      </table>
+      </div>
+      <div class="callout warn">
+        <span class="ct">Erreur classique</span>
+        <p>Vouloir vendre au segment E avec des coûts de structure du segment C. Une offre à 5 000 Ar avec un commercial salarié à 900 000 Ar ne tient pas. Le segment E exige des points de vente <strong>denses, légers et sans stock immobilisé</strong> ; le segment B exige de la <strong>facturation, de la garantie et de la preuve</strong>.</p>
+      </div>
+
+      <h3>4.2 Structure concurrentielle : un marché fragmenté, donc prenable par la fiabilité</h3>
+      <div class="grid g3">
+        <div class="card">
+          <h4>Ce qui domine</h4>
+          <p style="margin-bottom:0">Des micro-acteurs informels, sans marque, sans garantie, sans facture. Beaucoup de concurrence sur le prix, très peu sur la régularité.</p>
+        </div>
+        <div class="card">
+          <h4>Ce qui manque</h4>
+          <p style="margin-bottom:0">La tenue des délais, la traçabilité, la maintenance après-vente, le service client joignable, la capacité à servir un contrat B2B.</p>
+        </div>
+        <div class="card">
+          <h4>Ce qui gagne</h4>
+          <p style="margin-bottom:0">Une promesse simple, tenue 30 jours de suite, avec une preuve visible (photos, reçus, avis WhatsApp, contrat d'entretien).</p>
+        </div>
+      </div>
+      <p style="margin-top:18px">Conséquence : les barrières à l'entrée sont faibles, mais les barrières à la <strong>répétition</strong> sont fortes. Celui qui tient la promesse plusieurs mois capte l'abonnement, et l'abonnement vaut infiniment plus qu'une vente unique dans un pays où le crédit coûte 1,3 à 2,5 % par mois.</p>
+
+      <h3>4.3 Où et comment trouver des clients à Tana</h3>
+      <div class="table-scroll">
+      <table>
+        <thead><tr><th>Canal</th><th>Coût</th><th>Efficacité</th><th>Usage recommandé</th></tr></thead>
+        <tbody>
+          <tr><th>WhatsApp Business (catalogue + statuts)</th><td>Quasi nul</td><td>Très élevée en B2C et B2B de proximité</td><td>Canal principal : catalogue, devis, preuve, relance, service après-vente</td></tr>
+          <tr><th>Facebook (page + groupes de quartier)</th><td>Faible (boost : 20 000–100 000 Ar)</td><td>Élevée pour la notoriété locale</td><td>Offres, avant/après, témoignages vidéo, ciblage par quartier</td></tr>
+          <tr><th>Réseau fokontany / Dina / associations</th><td>Nul à faible</td><td>Très élevée pour l'eau, les déchets, les achats groupés</td><td>Entrer par le chef de quartier, parrainage, réunions</td></tr>
+          <tr><th>Bouche-à-oreille structuré (parrainage)</th><td>1–5 % du CA</td><td>La plus rentable à long terme</td><td>Récompense en mobile money, pas en promesse</td></tr>
+          <tr><th>Partenariats B2B (restaurants, cliniques, écoles)</th><td>Temps commercial</td><td>Élevée, revenus récurrents</td><td>Contrat mensuel, facture, SLA simple</td></tr>
+          <tr><th>Terrain / porte-à-porte ciblé</th><td>Temps + carburant</td><td>Élevée au démarrage</td><td>Zones où la pénurie est documentée (Haute-Ville, Faravohitra…)</td></tr>
+        </tbody>
+      </table>
+      </div>
+
+      <h3>4.4 Encaisser et sécuriser sa trésorerie</h3>
+      <p>Le mobile money est l'infrastructure de paiement du pays, mais il impose des contraintes qu'il faut connaître avant de modéliser :</p>
+      <ul>
+        <li><strong>Commissions marchand</strong> de l'ordre de 1,5 à 2,5 % selon l'opérateur et le type de compte. <span class="badge b-src">sourcé</span></li>
+        <li><strong>Plafonds</strong> : environ 8 à 10 M Ar/jour en réception selon l'opérateur, et 15 à 20 M Ar de solde maximum sur un compte standard. Au-delà, il faut un compte professionnel et/ou plusieurs comptes. <span class="badge b-src">sourcé</span></li>
+        <li><strong>Interopérabilité partielle</strong> : les transferts entre MVola et Orange Money fonctionnent, mais les paiements marchands par QR code ne sont pas interopérables. Il faut donc accepter plusieurs moyens de paiement.</li>
+        <li><strong>Le cash reste roi</strong> : prévoyez toujours la possibilité d'encaisser en espèces, et une procédure anti-perte (deux personnes, reçus numérotés, dépôt quotidien).</li>
+      </ul>
+      <div class="callout note">
+        <span class="ct">Règle de trésorerie</span>
+        <p><strong>Acompte de 50 % minimum</strong> sur tout service ou produit non standard, <strong>paiement à la livraison</strong> pour le B2C, <strong>facture à 15 jours maximum</strong> pour le B2B. Dans un pays où le crédit coûte 20 à 30 % par an, faire crédit à ses clients revient à leur prêter votre marge.</p>
+      </div>
+
+      <h3>4.5 Structure de coûts : les repères 2026</h3>
+      <div class="table-scroll">
+      <table>
+        <thead><tr><th>Poste</th><th class="num">Fourchette</th><th>Commentaire</th></tr></thead>
+        <tbody>
+          <tr><th>SMIG</th><td class="num">300 000 Ar/mois</td><td>Depuis mars 2026. Au-delà : charges patronales ≈ 13 % (CNaPS).</td></tr>
+          <tr><th>Employé polyvalent ( commerce, livraison)</th><td class="num">350 000 – 600 000 Ar</td><td>Le coût réel inclut transport, repas, téléphone.</td></tr>
+          <tr><th>Technicien (froid, solaire, plomberie)</th><td class="num">700 000 – 1 500 000 Ar</td><td>Profil rare : c'est le vrai goulot des business d'équipement.</td></tr>
+          <tr><th>Développeur web</th><td class="num">600 000 – 4 000 000 Ar</td><td>Junior ≈ 600–900 k ; confirmé 1,2–2 M ; senior 2,5–4 M (marché 2026).</td></tr>
+          <tr><th>Local commercial 20–40 m²</th><td class="num">300 000 – 1 200 000 Ar</td><td>Très variable selon quartier ; souvent 2 à 3 mois de caution.</td></tr>
+          <tr><th>Carburant</th><td class="num">5 300 Ar/L (SP95)<br>4 860 Ar/L (gasoil)</td><td>Prix administrés, ajustés régulièrement : indexez vos tarifs de livraison.</td></tr>
+          <tr><th>Électricité / internet</th><td class="num">150 000 – 600 000 Ar</td><td>Prévoir onduleur + sauvegarde solaire pour tout activité numérique.</td></tr>
+          <tr><th>Création d'une SARL</th><td class="num">≈ 400 000 Ar</td><td>Frais légaux + acompte fiscal ; l'immatriculation seule est moins chère.</td></tr>
+        </tbody>
+        <caption>Fourchettes observées en 2026. À vérifier localement, notamment pour les loyers et les profils techniques.</caption>
+      </table>
+      </div>
+
+      <h3>4.6 Fiscalité et formalisation : ce qu'il faut savoir avant d'ouvrir</h3>
+      <div class="grid g2">
+        <div class="card">
+          <h4>Les régimes</h4>
+          <ul style="margin-bottom:0">
+            <li><strong>Impôt synthétique : 5 %</strong> du chiffre d'affaires pour les petites structures (seuil usuellement cité : 200 M Ar de CA).</li>
+            <li><strong>Impôt sur les revenus / sociétés : 20 %</strong> au-delà, avec déduction des charges réelles.</li>
+            <li><strong>TVA : 20 %</strong> pour les assujettis (seuil de l'ordre de 200 à 400 M Ar selon les sources — à confirmer auprès de la DGI).</li>
+            <li><strong>Patente</strong> annuelle selon l'activité, et <strong>CNaPS</strong> dès le premier salarié.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h4>Pourquoi se formaliser (même petit)</h4>
+          <ul style="margin-bottom:0">
+            <li>Sans NIF, pas de <strong>client institutionnel</strong> : ONG, bailleurs, grandes entreprises et marchés publics exigent une facture.</li>
+            <li>La formalisation ouvre l'accès au <strong>crédit</strong> et aux appels d'offres.</li>
+            <li>Elle protège le dirigeant (contrats, assurance, litiges).</li>
+            <li>Le coût est faible (≈ 400 000 Ar) au regard du marché B2B perdu.</li>
+          </ul>
+        </div>
+      </div>
+      <p style="margin-top:16px"><small>Les seuils et taux évoluent avec chaque loi de finances. Faites valider votre régime par un comptable agréé avant la première facture — c'est un investissement de 300 000 à 600 000 Ar qui évite des redressements coûteux.</small></p>
+    </section>
+
+    <!-- ============ 5. OPPORTUNITES ============ -->
+    <section id="opportunites">
+      <div class="sec-num">Partie 5</div>
+      <h2>10 opportunités classées, de la plus « facile » à la plus lourde</h2>
+      <p class="lead">Chaque opportunité est notée sur six critères pondérés : capital nécessaire, rapidité du premier encaissement, marge, intensité de la demande, facilité réglementaire et scalabilité. Le classement n'est pas un verdict : il dépend de votre profil, de vos compétences et de votre accès au capital.</p>
+
+      <div class="table-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th>#</th><th>Opportunité</th>
+            <th class="num">Capital</th><th class="num">1<sup>er</sup> cash</th>
+            <th class="num">Marge nette</th><th class="num">Score /5</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><th>1</th><td><strong>Micro-agence numérique à l'export</strong><br><small>Dév, design, automatisation, marketing digital facturé en euros</small></td><td class="num">1,5 M Ar</td><td class="num">2–4 sem.</td><td class="num">50–65 %</td><td class="num"><strong>4,6</strong></td></tr>
+          <tr><th>2</th><td><strong>Formation technique courte</strong><br><small>Solaire, froid/clim, digital, anglais, comptabilité pratique</small></td><td class="num">2–6 M Ar</td><td class="num">3–5 sem.</td><td class="num">40–55 %</td><td class="num"><strong>4,25</strong></td></tr>
+          <tr><th>3</th><td><strong>Achats groupés de quartier</strong><br><small>Riz, huile, sucre, gaz, précommandés sur WhatsApp et payés par mobile money</small></td><td class="num">0–1 M Ar</td><td class="num">1–2 sem.</td><td class="num">6–10 % brut</td><td class="num"><strong>4,15</strong></td></tr>
+          <tr><th>4</th><td><strong>Logistique urbaine B2B</strong><br><small>Coursier moto, abonnements restaurants/e-commerce, livraison de quartier</small></td><td class="num">5–15 M Ar</td><td class="num">2–3 sem.</td><td class="num">35–45 %</td><td class="num"><strong>3,9</strong></td></tr>
+          <tr><th>5</th><td><strong>Eau : abonnement et kiosque</strong><br><small>Filtration, bonbonnes 20 L, livraison, contrats bureaux</small></td><td class="num">6–12 M Ar</td><td class="num">4–6 sem.</td><td class="num">35–45 %</td><td class="num"><strong>3,85</strong></td></tr>
+          <tr><th>6</th><td><strong>Froid &amp; solaire pour commerces</strong><br><small>Vente, installation, contrat de maintenance, leasing progressif</small></td><td class="num">3–20 M Ar</td><td class="num">4–8 sem.</td><td class="num">25–35 %</td><td class="num"><strong>3,6</strong></td></tr>
+          <tr><th>7</th><td><strong>Services à la diaspora</strong><br><small>Construction, rénovation et gestion locative à distance, avec preuve photo</small></td><td class="num">2–5 M Ar</td><td class="num">1–3 mois</td><td class="num">10–15 % du projet</td><td class="num"><strong>3,55</strong></td></tr>
+          <tr><th>8</th><td><strong>Agroalimentaire à cycle court</strong><br><small>Œufs, poulets, champignons, tilapia, maraîchage périurbain</small></td><td class="num">5–12 M Ar</td><td class="num">2–4 mois</td><td class="num">20–30 %</td><td class="num"><strong>3,4</strong></td></tr>
+          <tr><th>9</th><td><strong>Tourisme expérientiel à Tana</strong><br><small>Day tours, food tours, transferts aéroport, guesthouse, artisanat</small></td><td class="num">3–15 M Ar</td><td class="num">1–3 mois</td><td class="num">30–40 %</td><td class="num"><strong>3,15</strong></td></tr>
+          <tr><th>10</th><td><strong>Valorisation des déchets organiques</strong><br><small>Collecte, compost, larves pour alimentation avicole et piscicole</small></td><td class="num">8–20 M Ar</td><td class="num">3–6 mois</td><td class="num">25–35 %</td><td class="num"><strong>3,0</strong></td></tr>
+        </tbody>
+        <caption>Pondération du score : capital 20 %, rapidité 20 %, demande 20 %, marge 15 %, facilité réglementaire 15 %, scalabilité 10 %. Détail des notes dans le modèle financier (onglet « Comparaison »).</caption>
+      </table>
+      </div>
+
+      <h3>5.1 La carte de décision : capital vs vitesse</h3>
+      <div class="grid g2">
+        <div class="card" style="border-top:4px solid var(--teal)">
+          <h4>Faible capital · cash rapide</h4>
+          <p><strong>1.</strong> Micro-agence numérique · <strong>2.</strong> Formation · <strong>3.</strong> Achats groupés</p>
+          <p style="margin-bottom:0;font-size:.9rem;color:var(--muted)">À privilégier si vous avez une compétence, un ordinateur et un réseau. C'est ici que le risque financier est le plus faible.</p>
+        </div>
+        <div class="card" style="border-top:4px solid var(--gold)">
+          <h4>Capital moyen · cash moyen</h4>
+          <p><strong>4.</strong> Livraison · <strong>5.</strong> Eau · <strong>6.</strong> Froid solaire</p>
+          <p style="margin-bottom:0;font-size:.9rem;color:var(--muted)">À privilégier avec un apport de 5 à 15 M Ar, une compétence technique ou un associé opérationnel.</p>
+        </div>
+        <div class="card" style="border-top:4px solid var(--blue)">
+          <h4>Capital élevé · cash lent</h4>
+          <p><strong>7.</strong> Diaspora · <strong>8.</strong> Agro · <strong>10.</strong> Déchets</p>
+          <p style="margin-bottom:0;font-size:.9rem;color:var(--muted)">À réserver à des projets familiaux ou à des entrepreneurs déjà installés, avec un vrai accès au foncier.</p>
+        </div>
+        <div class="card" style="border-top:4px solid var(--terra)">
+          <h4>Dépend de l'extérieur</h4>
+          <p><strong>9.</strong> Tourisme</p>
+          <p style="margin-bottom:0;font-size:.9rem;color:var(--muted)">Forte marge mais très saisonnière et sensible à la connectivité aérienne et à l'image du pays.</p>
+        </div>
+      </div>
+
+      <h3>5.2 Les six cartes « à lancer cette semaine »</h3>
+      <p>Ces activités demandent peu ou pas de capital et peuvent démarrer sans local. Elles sont décrites ici en format court ; les quatre premières sont chiffrées en partie 6.</p>
+
+      <div class="table-scroll">
+      <table>
+        <thead><tr><th>Activité</th><th>Offre &amp; prix</th><th>Coûts clés</th><th>Rentabilité indicative</th><th>Risque principal</th></tr></thead>
+        <tbody>
+          <tr><th>Formation technique courte</th><td>Module de 4 semaines : 350 000 – 600 000 Ar/élève ; 15 élèves par session</td><td>Formateur 1,2–2 M Ar, salle 600 000 Ar, matériel pédagogique</td><td>CA 6–9 M Ar/session ; net 2,5–4 M Ar</td><td>Qualité pédagogique, taux de remplissage</td></tr>
+          <tr><th>Community management &amp; publicité Facebook</th><td>Forfait 400 000 – 900 000 Ar/mois par client</td><td>Téléphone, data, 1 assistant</td><td>5 clients = 2,5–4,5 M Ar/mois, net 60 %</td><td>Insatisfaction client, résultats difficiles à prouver</td></tr>
+          <tr><th>Gestion locative &amp; syndic de petites copropriétés</th><td>8–10 % du loyer perçu ; 300 000 Ar/mois par immeuble</td><td>1 gestionnaire, déplacements</td><td>10 immeubles = 3 M Ar/mois, net 40 %</td><td>Impayés, litiges, dépendance à la confiance</td></tr>
+          <tr><th>Réparation &amp; entretien (froid, plomberie, électricité)</th><td>Déplacement 30 000 Ar + main-d'œuvre 50 000–200 000 Ar</td><td>Outillage 600 000 Ar, moto, pièces</td><td>4 interventions/jour = 2–3 M Ar/mois</td><td>Pièces indisponibles, formation technique requise</td></tr>
+          <tr><th>Traiteur &amp; déjeuners d'entreprise</th><td>Abonnement 12 000 – 18 000 Ar/repas, 30–80 repas/jour</td><td>Matières 55 %, cuisine, 2 employés, livraison</td><td>50 repas/jour = 15 M Ar/mois, net 20–25 %</td><td>Hygiène, régularité, impayés</td></tr>
+          <tr><th>Photographie &amp; contenu pour entreprises</th><td>Reportage 300 000 – 1 200 000 Ar</td><td>Matériel 2–5 M Ar, déplacements</td><td>5 reportages/mois = 2,5–4 M Ar, net 50 %</td><td>Saturation du marché, prix tirés vers le bas</td></tr>
+        </tbody>
+      </table>
+      </div>
+
+      <div class="callout idea">
+        <span class="ct">Le combo le plus robuste</span>
+        <p>Une <strong>compétence technique</strong> (solaire, froid, plomberie, développement) + un <strong>canal WhatsApp</strong> + un <strong>contrat d'entretien mensuel</strong>. C'est ce trio qui transforme un métier en entreprise : il crée une rente de service récurrente, moins dépendante de la prospection quotidienne.</p>
+      </div>
+    </section>
+
+    <!-- ============ 6. PLANS ============ -->
+    <section id="plans">
+      <div class="sec-num">Partie 6</div>
+      <h2>Les 4 business chiffrés, de l'ariary à l'ariary</h2>
+      <p class="lead">Quatre modèles choisis pour couvrir les trois portes d'entrée et trois niveaux de capital. Tous les chiffres sont des <strong>estimations de travail</strong> : les prix sont ceux du marché de Tana en 2026, les volumes sont des hypothèses prudentes, et le modèle Excel joint permet de tout recalculer.</p>
+
+      <!-- PLAN A -->
+      <div class="plan">
+        <div class="plan-head">
+          <div>
+            <div class="n">Plan A · Opportunité n°1</div>
+            <h3>Micro-agence numérique à l'export</h3>
+          </div>
+          <div class="pill">Capital 1,5 M Ar · Rentable en 1 à 2 mois</div>
+        </div>
+        <div class="plan-body">
+          <p><strong>La promesse :</strong> vendre en euros une compétence que Madagascar produit à coût très bas. Un développeur confirmé coûte 1,2 à 2 M Ar/mois (250 à 420 €) et se facture 700 à 1 200 €/mois à un client européen. L'écart n'est pas une anomalie : c'est l'arbitrage économique de base du pays, et il est durable.</p>
+
+          <h4>L'offre et les prix</h4>
+          <div class="table-scroll">
+          <table>
+            <thead><tr><th>Offre</th><th class="num">Prix</th><th>Pourquoi ça se vend</th></tr></thead>
+            <tbody>
+              <tr><th>Site vitrine ou e-commerce (forfait)</th><td class="num">900 – 2 500 €</td><td>Une PME européenne paie 5 000 à 15 000 € en local : l'écart est irrésistible.</td></tr>
+              <tr><th>Forfait développement mensuel</th><td class="num">700 – 1 200 €/mois</td><td>Revenu récurrent, prévisible, sans prospection permanente.</td></tr>
+              <tr><th>Automatisation &amp; intégrations (n8n, API, IA)</th><td class="num">500 – 1 500 €</td><td>Forte demande, peu d'offre à Madagascar, marge de temps très élevée.</td></tr>
+              <tr><th>Maintenance &amp; hébergement</th><td class="num">80 – 200 €/mois</td><td>Rend le client « collant » et finance les mois creux.</td></tr>
+            </tbody>
+          </table>
+          </div>
+
+          <h4>Unit economics — scénario de croisière (mois 6)</h4>
+          <div class="table-scroll">
+          <table>
+            <thead><tr><th>Poste</th><th class="num">Mensuel</th><th>Hypothèse</th></tr></thead>
+            <tbody>
+              <tr><th>Chiffre d'affaires</th><td class="num">9 120 000 Ar</td><td>2 abonnements à 750 € + 400 € de projets, à 1 € = 4 800 Ar</td></tr>
+              <tr><td>Salaire fondateur</td><td class="num">−1 200 000 Ar</td><td>Rémunération du dirigeant incluse</td></tr>
+              <tr><td>Salaire développeur</td><td class="num">−900 000 Ar</td><td>Profil confirmé, 1 personne</td></tr>
+              <tr><td>Charges sociales (13 %)</td><td class="num">−273 000 Ar</td><td>CNaPS</td></tr>
+              <tr><td>Internet + sauvegarde électrique</td><td class="num">−400 000 Ar</td><td>Fibre/4G + onduleur ; indispensable</td></tr>
+              <tr><td>Outils (GitHub, Figma, hébergement, IA)</td><td class="num">−250 000 Ar</td><td>Coûts en devise</td></tr>
+              <tr><td>Prospection &amp; marketing</td><td class="num">−300 000 Ar</td><td>LinkedIn, portfolio, contenu</td></tr>
+              <tr><td>Comptabilité, banque, divers</td><td class="num">−200 000 Ar</td><td>—</td></tr>
+              <tr><th>Résultat net avant impôt</th><td class="num">5 597 000 Ar</td><td><strong>61 % de marge nette</strong></td></tr>
+            </tbody>
+          </table>
+          </div>
+
+          <div class="kv">
+            <div><div class="k">Investissement</div><div class="v">1 500 000 Ar</div></div>
+            <div><div class="k">Seuil de rentabilité</div><div class="v">≈ 735 €/mois</div></div>
+            <div><div class="k">Soit</div><div class="v">1 client</div></div>
+            <div><div class="k">Retour sur capital</div><div class="v">&lt; 1 mois</div></div>
+          </div>
+
+          <h4>Ce qui fait la différence</h4>
+          <ul class="checklist">
+            <li><strong>Une niche, pas du généralisme.</strong> « Développeur PHP » ne se vend pas ; « automatisation Shopify + facturation pour e-commerçants » se vend.</li>
+            <li><strong>Un portfolio en 7 jours, même fictif.</strong> Trois études de cas avec captures, chiffres et avant/après valent mieux qu'un CV.</li>
+            <li><strong>Le paiement d'avance.</strong> 50 % à la commande via virement/Wise/Payoneer, 50 % à la livraison. Jamais de projet terminé avant paiement.</li>
+            <li><strong>La preuve de fiabilité.</strong> Répondre en moins de 4 h, livrer à la date annoncée, documenter : c'est ce qui différencie Madagascar d'autres destinations offshore.</li>
+            <li><strong>La sauvegarde électrique et internet.</strong> Un client européen ne tolère pas trois jours de silence à cause d'une coupure.</li>
+          </ul>
+
+          <h4>Lancement en 30 jours</h4>
+          <ol class="steps">
+            <li><strong>Jours 1–5 :</strong> choisir une niche, créer la page LinkedIn et un site portfolio de 3 études de cas.</li>
+            <li><strong>Jours 6–12 :</strong> prospecter 15 PME européennes par jour (LinkedIn + e-mail ciblé + réseau diaspora), avec une offre packagée à prix fixe.</li>
+            <li><strong>Jours 13–20 :</strong> signer 1 à 2 missions, encaisser 50 % d'avance, livrer en 5 jours ouvrés.</li>
+            <li><strong>Jours 21–30 :</strong> demander un témoignage et une recommandation, transformer la mission en abonnement mensuel.</li>
+          </ol>
+
+          <div class="callout warn">
+            <span class="ct">Risques et parades</span>
+            <p>Dépendance à un client unique → viser 3 clients minimum. Qualité insuffisante → se limiter à une stack maîtrisée. Fiscalité des devises → se faire accompagner pour rapatrier et déclarer les recettes. Concurrence des agences locales → jouer la transparence des prix et la garantie de délai.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- PLAN B -->
+      <div class="plan">
+        <div class="plan-head">
+          <div>
+            <div class="n">Plan B · Opportunité n°3</div>
+            <h3>Achats groupés de quartier</h3>
+          </div>
+          <div class="pill">Capital 0–1 M Ar · Cash en 1 à 2 semaines</div>
+        </div>
+        <div class="plan-body">
+          <p><strong>La promesse :</strong> livrer le riz, l'huile, le sucre et le gaz au prix de gros, à domicile, en s'appuyant sur la précommande et le mobile money. Vous n'achetez rien avant d'avoir été payé : ce n'est pas du commerce, c'est de l'<em>agrégation de demande</em>.</p>
+
+          <h4>Le modèle en une phrase</h4>
+          <p>Un groupe WhatsApp par quartier → une commande collective par semaine → achat au grossiste ou directement au producteur → répartition et livraison le samedi → marge de 6 à 10 %.</p>
+
+          <h4>Unit economics — scénario de croisière (mois 6)</h4>
+          <div class="table-scroll">
+          <table>
+            <thead><tr><th>Poste</th><th class="num">Mensuel</th><th>Hypothèse</th></tr></thead>
+            <tbody>
+              <tr><th>Volume d'affaires (GMV)</th><td class="num">33 750 000 Ar</td><td>250 clients actifs × 1,5 commande/mois × 90 000 Ar de panier</td></tr>
+              <tr><th>Marge brute (8 %)</th><td class="num">2 700 000 Ar</td><td>Riz 5–7 %, huile 8 %, gaz 10–12 %</td></tr>
+              <tr><td>Assistant (commandes, livraison)</td><td class="num">−400 000 Ar</td><td>Temps partiel puis plein temps</td></tr>
+              <tr><td>Transport et manutention</td><td class="num">−250 000 Ar</td><td>Location ponctuelle d'un camion</td></tr>
+              <tr><td>Emballage, sacs, impression</td><td class="num">−80 000 Ar</td><td>—</td></tr>
+              <tr><td>Marketing et parrainage</td><td class="num">−150 000 Ar</td><td>2 000 Ar par nouveau client parrainé</td></tr>
+              <tr><td>Téléphone, data, frais mobile money</td><td class="num">−60 000 Ar</td><td>Frais marchand ≈ 1,5–2 %</td></tr>
+              <tr><th>Résultat net</th><td class="num">1 760 000 Ar</td><td><strong>≈ 5 % du GMV</strong></td></tr>
+            </tbody>
+          </table>
+          </div>
+
+          <h4>Sensibilité : le seuil est dans le volume</h4>
+          <div class="table-scroll">
+          <table>
+            <thead><tr><th>GMV mensuel</th><th class="num">Commandes / mois</th><th class="num">Marge brute</th><th class="num">Charges fixes</th><th class="num">Résultat net</th></tr></thead>
+            <tbody>
+              <tr><th>10 M Ar</th><td class="num">110</td><td class="num">800 000</td><td class="num">940 000</td><td class="num" style="color:var(--terra)">−140 000</td></tr>
+              <tr><th>20 M Ar</th><td class="num">220</td><td class="num">1 600 000</td><td class="num">940 000</td><td class="num">660 000</td></tr>
+              <tr><th>33,75 M Ar</th><td class="num">375</td><td class="num">2 700 000</td><td class="num">940 000</td><td class="num"><strong>1 760 000</strong></td></tr>
+              <tr><th>60 M Ar</th><td class="num">670</td><td class="num">4 800 000</td><td class="num">1 400 000</td><td class="num"><strong>3 400 000</strong></td></tr>
+            </tbody>
+            <caption>Seuil de rentabilité ≈ 11,8 M Ar de GMV, soit environ 130 commandes par mois.</caption>
+          </table>
+          </div>
+
+          <div class="callout key">
+            <span class="ct">Pourquoi c'est le business le plus « facile »</span>
+            <p>Zéro stock, zéro local, zéro machine. Le client paie avant la commande. Votre seul actif est la <strong>confiance du groupe WhatsApp</strong> — et elle se gagne en trois livraisons réussies. C'est aussi le plus fragile : marge faible, dépendance au prix du riz, et tentation de faire du crédit. Une seule règle : <strong>pas d'argent avancé, pas de marchandise livrée.</strong></p>
+          </div>
+
+          <h4>Lancement en 30 jours</h4>
+          <ol class="steps">
+            <li><strong>Jours 1–3 :</strong> choisir 2 produits seulement (riz 25 kg + huile 5 L) et un quartier de 300 à 500 ménages.</li>
+            <li><strong>Jours 4–7 :</strong> négocier le prix de gros et obtenir un devis écrit ; créer le groupe WhatsApp et un tableau de commandes.</li>
+            <li><strong>Jours 8–14 :</strong> recruter 50 clients par du porte-à-porte et un parrainage à 2 000 Ar.</li>
+            <li><strong>Jours 15–21 :</strong> première commande groupée payée par mobile money, livraison un samedi matin, photos et témoignages.</li>
+            <li><strong>Jours 22–30 :</strong> répéter, ajouter le gaz et le sucre, ouvrir un deuxième quartier.</li>
+          </ol>
+        </div>
+      </div>
+
+      <!-- PLAN C -->
+      <div class="plan">
+        <div class="plan-head">
+          <div>
+            <div class="n">Plan C · Opportunité n°4</div>
+            <h3>Logistique urbaine B2B</h3>
+          </div>
+          <div class="pill">Capital 5 M Ar (1 moto) · 15 M Ar (3 motos)</div>
+        </div>
+        <div class="plan-body">
+          <p><strong>La promesse :</strong> vendre du temps aux entreprises. Restaurants qui livrent, boutiques Facebook, cliniques, écoles, e-commerçants : tous ont besoin d'un coursier fiable, à l'heure, joignable sur WhatsApp, avec un prix connu à l'avance.</p>
+
+          <h4>L'offre et les prix</h4>
+          <div class="table-scroll">
+          <table>
+            <thead><tr><th>Offre</th><th class="num">Prix</th><th>Commentaire</th></tr></thead>
+            <tbody>
+              <tr><th>Course intra-Tana (0–8 km)</th><td class="num">4 000 – 7 000 Ar</td><td>Paiement à la course, B2C et petits commerces</td></tr>
+              <tr><th>Abonnement 15 courses/semaine</th><td class="num">55 000 – 70 000 Ar</td><td>Récurrent, prioritaire, facturé</td></tr>
+              <tr><th>Forfait restaurant (livraisons du soir)</th><td class="num">150 000 – 300 000 Ar/mois</td><td>Le meilleur segment : volume stable, zone courte</td></tr>
+              <tr><th>Livraison inter-quartiers / périphérie</th><td class="num">8 000 – 15 000 Ar</td><td>Marge plus élevée, temps plus long</td></tr>
+            </tbody>
+          </table>
+          </div>
+
+          <h4>Unit economics par moto</h4>
+          <div class="table-scroll">
+          <table>
+            <thead><tr><th>Poste</th><th class="num">Mensuel (1 moto)</th><th>Hypothèse</th></tr></thead>
+            <tbody>
+              <tr><th>Chiffre d'affaires</th><td class="num">2 600 000 Ar</td><td>20 courses/jour × 5 000 Ar × 26 jours</td></tr>
+              <tr><td>Commission livreur (40 %)</td><td class="num">−1 040 000 Ar</td><td>Carburant à sa charge — standard du marché</td></tr>
+              <tr><td>Entretien, pneus, vidanges</td><td class="num">−70 000 Ar</td><td>Usage intensif</td></tr>
+              <tr><td>Assurance</td><td class="num">−25 000 Ar</td><td>—</td></tr>
+              <tr><th>Marge par moto</th><td class="num">1 465 000 Ar</td><td><strong>56 % du CA</strong></td></tr>
+            </tbody>
+          </table>
+          </div>
+
+          <h4>Le point critique : la masse critique</h4>
+          <div class="table-scroll">
+          <table>
+            <thead><tr><th>Configuration</th><th class="num">CA mensuel</th><th class="num">Marge des motos</th><th class="num">Charges fixes</th><th class="num">Net</th><th class="num">Retour</th></tr></thead>
+            <tbody>
+              <tr><th>1 moto, dirigée par le fondateur</th><td class="num">2,60 M</td><td class="num">1,46 M</td><td class="num">600 000</td><td class="num">865 000</td><td class="num">≈ 6,4 mois</td></tr>
+              <tr><th>3 motos + 1 superviseur</th><td class="num">7,80 M</td><td class="num">4,39 M</td><td class="num">1 200 000</td><td class="num">3,19 M</td><td class="num">≈ 4,5 mois</td></tr>
+              <tr><th>3 motos sous-utilisées (10 courses/j)</th><td class="num">3,90 M</td><td class="num">2,06 M</td><td class="num">1 200 000</td><td class="num">855 000</td><td class="num">≈ 17 mois</td></tr>
+            </tbody>
+            <caption>Investissement : 1 moto ≈ 4,25 M Ar + 250 000 Ar d'équipement + 1 M Ar de fonds de roulement, soit 5,5 M Ar ; 3 motos ≈ 14,5 M Ar. Les motos supplémentaires ne se justifient qu'avec un carnet de commandes déjà rempli à 60 %.</caption>
+          </table>
+          </div>
+
+          <div class="callout note">
+            <span class="ct">La règle qui protège</span>
+            <p>Ne jamais acheter une moto sans <strong>un client qui représente déjà 40 % de son seuil</strong>. Le vrai métier n'est pas la livraison : c'est le <em>dispatch</em> (répartition des courses), la relation client et la gestion des pannes. Un livreur sans course coûte plus cher qu'un livreur sans moto.</p>
+          </div>
+
+          <h4>Lancement en 30 jours</h4>
+          <ol class="steps">
+            <li><strong>Jours 1–7 :</strong> signer 3 clients B2B (2 restaurants + 1 boutique Facebook) avec un forfait hebdomadaire.</li>
+            <li><strong>Jours 8–14 :</strong> démarrer avec une seule moto louée ou celle du fondateur, et un livreur rémunéré à la commission.</li>
+            <li><strong>Jours 15–21 :</strong> mesurer trois indicateurs : taux de livraison à l'heure, coût par course, litiges.</li>
+            <li><strong>Jours 22–30 :</strong> n'acheter la deuxième moto que si le taux d'occupation dépasse 70 %.</li>
+          </ol>
+        </div>
+      </div>
+
+      <!-- PLAN D -->
+      <div class="plan">
+        <div class="plan-head">
+          <div>
+            <div class="n">Plan D · Opportunité n°5</div>
+            <h3>Eau : abonnement et kiosque</h3>
+          </div>
+          <div class="pill">Capital 11,5 M Ar (ou 4,5 M Ar en kiosque)</div>
+        </div>
+        <div class="plan-body">
+          <p><strong>La promesse :</strong> de l'eau potable, tous les jours, livrée à l'heure, à un prix inférieur au prix de la pénurie. Le marché existe déjà — il est simplement mal servi, cher et imprévisible.</p>
+
+          <h4>L'offre et les prix</h4>
+          <div class="table-scroll">
+          <table>
+            <thead><tr><th>Offre</th><th class="num">Prix</th><th>Positionnement</th></tr></thead>
+            <tbody>
+              <tr><th>Bonbonne 20 L livrée</th><td class="num">2 500 Ar</td><td>Sous le prix de crise (3 000 Ar) et avec la régularité en plus</td></tr>
+              <tr><th>Bonbonne 20 L au kiosque</th><td class="num">1 500 Ar</td><td>Capte les clients qui viennent avec leur propre bidon</td></tr>
+              <tr><th>Abonnement 4 bonbonnes/mois</th><td class="num">9 000 Ar</td><td>Prépayé : trésorerie d'avance et fidélisation</td></tr>
+              <tr><th>Contrat bureau / restaurant (30 bonbonnes)</th><td class="num">70 000 Ar/mois</td><td>Le cœur de la rentabilité : volume et régularité</td></tr>
+              <tr><th>Installation d'autonomie (cuve + pompe + filtre)</th><td class="num">700 000 – 3 000 000 Ar</td><td>Marge ponctuelle de 30–35 %, ticket élevé</td></tr>
+            </tbody>
+          </table>
+          </div>
+
+          <h4>Unit economics — scénario de croisière</h4>
+          <div class="table-scroll">
+          <table>
+            <thead><tr><th>Poste</th><th class="num">Mensuel</th><th>Hypothèse</th></tr></thead>
+            <tbody>
+              <tr><th>Chiffre d'affaires</th><td class="num">3 510 000 Ar</td><td>45 bonbonnes livrées à 2 500 Ar + 15 au kiosque à 1 500 Ar, 26 jours</td></tr>
+              <tr><td>Eau brute, filtration, consommables</td><td class="num">−546 000 Ar</td><td>≈ 350 Ar par bonbonne (filtres, UV, eau, amortissement)</td></tr>
+              <tr><td>Employé (production + livraison)</td><td class="num">−450 000 Ar</td><td>1 personne polyvalente</td></tr>
+              <tr><td>Loyer du local (20–30 m²)</td><td class="num">−350 000 Ar</td><td>Quartier dense, accès moto</td></tr>
+              <tr><td>Électricité + sauvegarde</td><td class="num">−150 000 Ar</td><td>Pompe, filtration, onduleur</td></tr>
+              <tr><td>Transport (moto cargo / tricycle)</td><td class="num">−300 000 Ar</td><td>Carburant et entretien</td></tr>
+              <tr><td>Marketing, parrainage, enseigne</td><td class="num">−200 000 Ar</td><td>—</td></tr>
+              <tr><th>Résultat net</th><td class="num">1 514 000 Ar</td><td><strong>43 % de marge nette</strong></td></tr>
+            </tbody>
+          </table>
+          </div>
+
+          <h4>Sensibilité : tout dépend du nombre de bonbonnes par jour</h4>
+          <div class="table-scroll">
+          <table>
+            <thead><tr><th>Bonbonnes / jour</th><th class="num">CA mensuel</th><th class="num">Charges variables</th><th class="num">Charges fixes</th><th class="num">Résultat</th></tr></thead>
+            <tbody>
+              <tr><th>20</th><td class="num">1 170 000</td><td class="num">182 000</td><td class="num">1 450 000</td><td class="num" style="color:var(--terra)">−462 000</td></tr>
+              <tr><th>40</th><td class="num">2 340 000</td><td class="num">364 000</td><td class="num">1 450 000</td><td class="num">526 000</td></tr>
+              <tr><th>60</th><td class="num">3 510 000</td><td class="num">546 000</td><td class="num">1 450 000</td><td class="num"><strong>1 514 000</strong></td></tr>
+              <tr><th>80</th><td class="num">4 680 000</td><td class="num">728 000</td><td class="num">1 650 000</td><td class="num"><strong>2 302 000</strong></td></tr>
+              <tr><th>100</th><td class="num">5 850 000</td><td class="num">910 000</td><td class="num">1 850 000</td><td class="num"><strong>3 090 000</strong></td></tr>
+            </tbody>
+            <caption>Seuil de rentabilité : ≈ 30 bonbonnes par jour. Investissement 11,5 M Ar → retour en 7 à 8 mois à 60 bonbonnes/jour.</caption>
+          </table>
+          </div>
+
+          <div class="callout warn">
+            <span class="ct">Les trois vérités de l'eau</span>
+            <p><strong>1. La qualité est un risque juridique et commercial.</strong> Faites analyser l'eau (laboratoire) et affichez les résultats : c'est votre meilleur argument de vente face à l'informel. <strong>2. La densité fait la marge</strong> : mieux vaut 60 clients dans trois quartiers que 60 clients dispersés dans toute la ville. <strong>3. La logistique est le vrai métier</strong> : une tournée mal organisée annule la marge.</p>
+          </div>
+
+          <h4>Lancement en 30 jours</h4>
+          <ol class="steps">
+            <li><strong>Jours 1–7 :</strong> choisir un quartier à forte pénurie, faire analyser l'eau d'une source, identifier 10 entreprises clientes potentielles (bureaux, restaurants, cliniques).</li>
+            <li><strong>Jours 8–14 :</strong> acheter une unité de filtration compacte et 60 bonbonnes, aménager un local de 20 m².</li>
+            <li><strong>Jours 15–21 :</strong> signer 5 contrats bureaux (30 bonbonnes/mois chacun) : c'est le socle qui couvre les charges fixes.</li>
+            <li><strong>Jours 22–30 :</strong> ouvrir le kiosque, lancer le parrainage, mesurer le coût par livraison et ajuster la tournée.</li>
+          </ol>
+        </div>
+      </div>
+
+      <!-- VARIANTE FROID -->
+      <div class="plan">
+        <div class="plan-head">
+          <div>
+            <div class="n">Variante · Opportunité n°6</div>
+            <h3>Froid &amp; solaire : le métier le plus défendable</h3>
+          </div>
+          <div class="pill">Capital 3–5 M Ar en installateur</div>
+        </div>
+        <div class="plan-body">
+          <p><strong>Pourquoi c'est intéressant :</strong> la compétence technique est rare, le besoin est permanent (délestages, étiage), et le contrat de maintenance crée une rente. Le modèle le plus accessible n'est pas de vendre du matériel, mais de vendre de l'<strong>installation + garantie + entretien</strong>.</p>
+          <div class="grid g2">
+            <div class="card">
+              <h4>Modèle installateur (recommandé)</h4>
+              <ul style="margin-bottom:0">
+                <li>Investissement : outillage + kit de démonstration ≈ 3 à 5 M Ar.</li>
+                <li>Le client paie <strong>50 % d'acompte</strong> : vous n'immobilisez pas de stock.</li>
+                <li>Installation complète (3 kW + batterie + congélateur) : 12 à 16 M Ar, marge 25–30 %.</li>
+                <li>Entretien : 150 000 à 300 000 Ar/an par installation, marge 60 %.</li>
+                <li>2 installations/mois avec 2 techniciens : ≈ 4 à 5 M Ar de résultat net.</li>
+              </ul>
+            </div>
+            <div class="card">
+              <h4>Modèle leasing (phase 2)</h4>
+              <ul style="margin-bottom:0">
+                <li>Nécessite 30 à 50 M Ar de matériel immobilisé.</li>
+                <li>Loyer de 250 000 à 450 000 Ar/mois sur 18 à 24 mois.</li>
+                <li>À financer avec un partenariat microfinance, pas avec votre trésorerie.</li>
+                <li>Excellent pour les épiceries, pharmacies et gargotes qui n'ont pas 12 M Ar disponibles.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="callout key">
+            <span class="ct">La compétence avant le capital</span>
+            <p>Un installateur médiocre détruit sa réputation en deux chantiers. Avant de vendre, formez-vous (3 à 6 mois) au dimensionnement, à la sécurité et aux batteries lithium. C'est l'investissement le plus rentable de ce plan — et il coûte moins de 2 M Ar.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 7. ACTION ============ -->
+    <section id="action">
+      <div class="sec-num">Partie 7</div>
+      <h2>Plan d'action : 90 jours pour passer de l'idée au premier bénéfice</h2>
+      <p class="lead">La différence entre une idée et un business, à Madagascar, tient rarement au financement. Elle tient à l'exécution des 30 premiers jours : trouver dix clients payants avant d'acheter du matériel.</p>
+
+      <h3>7.1 Les quatre phases</h3>
+      <div class="table-scroll">
+      <table>
+        <thead><tr><th>Phase</th><th>Objectif</th><th>Actions clés</th><th>Indicateur de sortie</th></tr></thead>
+        <tbody>
+          <tr><th>J1 – J14<br><small>Valider</small></th><td>Prouver que quelqu'un paie</td><td>20 entretiens clients ; 3 offres testées ; 1 page WhatsApp + 1 page Facebook ; prix affichés.</td><td><strong>10 précommandes</strong> ou 5 acomptes encaissés</td></tr>
+          <tr><th>J15 – J45<br><small>Lancer</small></th><td>Livrer les premiers clients et encaisser</td><td>Formalisation (NIF) ; processus de livraison écrit ; 1 à 2 personnes ; stock minimum ou aucun stock.</td><td><strong>CA ≥ charges du mois</strong></td></tr>
+          <tr><th>J46 – J70<br><small>Répéter</small></th><td>Transformer l'essai en habitude</td><td>Contrats ou abonnements ; parrainage ; mesure du coût par client ; correction des pertes.</td><td><strong>30 % de CA récurrent</strong></td></tr>
+          <tr><th>J71 – J90<br><small>Dupliquer</small></th><td>Ouvrir un deuxième quartier, produit ou client</td><td>Recruter un chef d'équipe ; standardiser ; investir seulement dans ce qui est déjà saturé.</td><td><strong>Marge nette ≥ 20 %</strong> et trésorerie positive</td></tr>
+        </tbody>
+      </table>
+      </div>
+
+      <h3>7.2 Le kit de démarrage à 0 ariary</h3>
+      <div class="grid g2">
+        <div class="card">
+          <h4>Ce que vous avez déjà</h4>
+          <ul class="checklist" style="margin-bottom:0">
+            <li>Un téléphone et un numéro WhatsApp Business (gratuit).</li>
+            <li>Un compte MVola ou Orange Money pour encaisser.</li>
+            <li>Un réseau : famille, anciens camarades, église, quartier, anciens employeurs.</li>
+            <li>Une compétence : langue, technique, commerce, conduite, cuisine, dessin.</li>
+            <li>Du temps : 20 heures par semaine suffisent pour tester une offre.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h4>Ce que vous n'avez pas besoin d'acheter</h4>
+          <ul class="checklist x" style="margin-bottom:0">
+            <li>Un local avant d'avoir 10 clients réguliers.</li>
+            <li>Du stock avant d'avoir des précommandes payées.</li>
+            <li>Un logo ou un site avant d'avoir une offre claire.</li>
+            <li>Une SARL avant que le B2B ne l'exige.</li>
+            <li>Une publicité payante avant que le bouche-à-oreille ne fonctionne.</li>
+          </ul>
+        </div>
+      </div>
+
+      <h3>7.3 Financer sans se mettre en danger</h3>
+      <div class="table-scroll">
+      <table>
+        <thead><tr><th>Source</th><th class="num">Coût</th><th>Quand l'utiliser</th><th>Risque</th></tr></thead>
+        <tbody>
+          <tr><th>Autofinancement / épargne</th><td class="num">0 %</td><td>Toujours en premier, pour le test.</td><td>Perte limitée à ce qu'on peut perdre.</td></tr>
+          <tr><th>Précommandes et acomptes clients</th><td class="num">0 %</td><td>Le meilleur financement : il prouve la demande.</td><td>Promesse non tenue = réputation détruite.</td></tr>
+          <tr><th>Tontine / famille</th><td class="num">0–5 %</td><td>Pour le stock ou l'équipement, avec échéancier écrit.</td><td>Mélange affectif et financier : toujours formaliser.</td></tr>
+          <tr><th>Microfinance (OTIV, CECAM, PAMF…)</th><td class="num">1,3–2,5 %/mois<br><small>≈ 16–30 %/an</small></td><td>Pour un besoin de trésorerie court (3–12 mois) déjà validé par des ventes.</td><td>Le remboursement tombe même si les ventes baissent.</td></tr>
+          <tr><th>Banque</th><td class="num">12–18 %/an</td><td>Investissement lourd avec garanties et historique.</td><td>Garanties personnelles, délais.</td></tr>
+          <tr><th>Associé diaspora</th><td class="num">Part du capital</td><td>Pour les projets à forte intensité capitalistique (solaire, eau, agro).</td><td>Aligner les rôles et les sorties par écrit dès le départ.</td></tr>
+        </tbody>
+      </table>
+      </div>
+
+      <div class="callout warn">
+        <span class="ct">Le piège du crédit</span>
+        <p>À 1,5–2,5 % par mois, un emprunt de 10 M Ar coûte 150 000 à 250 000 Ar d'intérêts <em>chaque mois</em>, avant même de rembourser le capital. Ne financez par la dette que ce qui <strong>génère du cash immédiatement</strong> (stock qui tourne, moto déjà louée), jamais un local vide ou un stock dormant.</p>
+      </div>
+
+      <h3>7.4 Le tableau de bord du dirigeant</h3>
+      <div class="grid g2">
+        <div class="card">
+          <h4>Chaque semaine</h4>
+          <ul style="margin-bottom:0">
+            <li>Nombre de prospects contactés et de devis envoyés.</li>
+            <li>Nombre de clients livrés et <strong>encaissements réels</strong>.</li>
+            <li>Coût par livraison / par client.</li>
+            <li>Nombre de réclamations et délai de réponse.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h4>Chaque mois</h4>
+          <ul style="margin-bottom:0">
+            <li>Chiffre d'affaires, marge brute, marge nette.</li>
+            <li>Part du CA récurrent (abonnements, contrats).</li>
+            <li>Trésorerie disponible en fin de mois.</li>
+            <li>Top 3 des clients : leur poids dans le CA (danger si &gt; 40 %).</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ RISQUES ============ -->
+    <section id="risques">
+      <div class="sec-num">Partie 8</div>
+      <h2>Risques, erreurs fatales et parades</h2>
+
+      <h3>8.1 Les huit risques à surveiller</h3>
+      <div class="table-scroll">
+      <table>
+        <thead><tr><th>Risque</th><th>Probabilité</th><th>Impact</th><th>Parade concrète</th></tr></thead>
+        <tbody>
+          <tr><th>Instabilité politique / changement de règles</th><td>Élevée</td><td>Moyen à fort</td><td>Contrats courts, clients diversifiés, pas de dépendance aux marchés publics, structure légère.</td></tr>
+          <tr><th>Dévaluation / volatilité de l'ariary</th><td>Élevée</td><td>Fort sur les imports</td><td>Facturer en devise quand c'est possible, indexer les prix, éviter le stock importé long.</td></tr>
+          <tr><th>Coupures d'eau, d'électricité, d'internet</th><td>Quasi certaine</td><td>Fort</td><td>Onduleur + solaire de secours, groupes de secours, doubles opérateurs, processus dégradés.</td></tr>
+          <tr><th>Perte de pouvoir d'achat des clients</th><td>Élevée</td><td>Fort en B2C</td><td>Formats plus petits, offres d'entrée de gamme, abonnements, priorité au B2B et à la diaspora.</td></tr>
+          <tr><th>Impayés et crédit accordé</th><td>Élevée</td><td>Très fort</td><td>Acompte, paiement à la livraison, relance à J+3, arrêt immédiat du service.</td></tr>
+          <tr><th>Vol, casse, accident (motos, matériel)</th><td>Moyenne</td><td>Fort</td><td>Assurance, géolocalisation, double verrouillage, formation des livreurs.</td></tr>
+          <tr><th>Cyclones et inondations</th><td>Annuelle</td><td>Fort</td><td>Stock surélevé, sauvegarde numérique, local hors zone inondable, 2 mois de trésorerie.</td></tr>
+          <tr><th>Dépendance à un client ou à un fournisseur</th><td>Moyenne</td><td>Très fort</td><td>Aucun client &gt; 30–40 % du CA ; second fournisseur identifié pour chaque intrant critique.</td></tr>
+        </tbody>
+      </table>
+      </div>
+
+      <h3>8.2 Les sept erreurs qui tuent les projets à Tana</h3>
+      <ol class="steps">
+        <li><strong>Acheter le matériel avant les clients.</strong> Le stock immobilisé est le premier cimetière de trésorerie du pays.</li>
+        <li><strong>Confondre chiffre d'affaires et bénéfice.</strong> Une livraison à 5 000 Ar avec 3 500 Ar de coût ne nourrit personne.</li>
+        <li><strong>Faire crédit pour « garder le client ».</strong> Vous financez son activité avec votre marge.</li>
+        <li><strong>Vouloir tout faire seul.</strong> Sans un associé ou un employé fiable, la croissance s'arrête au premier problème de santé.</li>
+        <li><strong>Ignorer les charges cachées.</strong> Carburant, téléphone, transport, pourboires, pertes, frais mobile money : 15 à 25 % du CA.</li>
+        <li><strong>Choisir un emplacement par prestige.</strong> Un loyer de 1,5 M Ar dans un quartier chic tue un business de proximité.</li>
+        <li><strong>Ne pas mesurer.</strong> Un carnet de caisse et un tableau Excel suffisent — mais il faut les tenir chaque jour.</li>
+      </ol>
+
+      <div class="callout key">
+        <span class="ct">Le test des trois questions</span>
+        <p>Avant d'investir un ariary, répondez par écrit : <strong>1.</strong> Qui est le client exact et où le trouver ? <strong>2.</strong> Qu'est-ce qu'il paie aujourd'hui pour résoudre ce problème ? <strong>3.</strong> Pourquoi moi et pas le voisin ? Si l'une des trois réponses est floue, vous n'avez pas encore un business, vous avez une intention.</p>
+      </div>
+    </section>
+
+    <!-- ============ ANNEXES ============ -->
+    <section id="annexes">
+      <div class="sec-num">Annexes</div>
+      <h2>Outils de validation et sources</h2>
+
+      <h3>Annexe A — Le protocole de validation en 14 jours</h3>
+      <p>À faire avant tout investissement, quel que soit le plan choisi. Coût total : quelques dizaines de milliers d'ariary et beaucoup de déplacements.</p>
+      <div class="table-scroll">
+      <table>
+        <thead><tr><th>Jour</th><th>Action</th><th>Preuve attendue</th></tr></thead>
+        <tbody>
+          <tr><th>J1</th><td>Écrire l'offre en une phrase : « Je fais [service] pour [client] à [prix], livré en [délai]. »</td><td>La phrase tient sur une ligne, sans jargon.</td></tr>
+          <tr><th>J2–J5</th><td>15 entretiens avec des clients cibles (pas des amis) : combien dépensent-ils aujourd'hui, chez qui, à quelle fréquence, quels sont leurs irritants ?</td><td>15 réponses notées, dont 3 prix spontanément cités.</td></tr>
+          <tr><th>J6–J7</th><td>Construire une offre d'essai à prix ferme, avec une limite claire (ex. 10 premiers clients).</td><td>Une affiche WhatsApp + un texte de présentation.</td></tr>
+          <tr><th>J8–J11</th><td>Proposer l'offre à 40 prospects, demander un acompte ou une précommande.</td><td><strong>5 paiements ou 10 engagements écrits.</strong></td></tr>
+          <tr><th>J12–J13</th><td>Livrer les 5 premiers clients, mesurer le temps réel et le coût réel.</td><td>Coût unitaire réel comparé à l'hypothèse.</td></tr>
+          <tr><th>J14</th><td>Décision : continuer, ajuster le prix, ou changer d'offre.</td><td>Une décision écrite, pas un « on verra ».</td></tr>
+        </tbody>
+      </table>
+      </div>
+
+      <h4>Les 12 questions à poser à chaque client potentiel</h4>
+      <div class="grid g2">
+        <div class="card">
+          <ol style="margin-bottom:0">
+            <li>Comment résolvez-vous ce problème aujourd'hui ?</li>
+            <li>Combien cela vous coûte-t-il par mois ?</li>
+            <li>Qui décide de l'achat chez vous ?</li>
+            <li>Qu'est-ce qui vous fait changer de fournisseur ?</li>
+            <li>Quel serait un prix acceptable ?</li>
+            <li>À quelle fréquence en avez-vous besoin ?</li>
+          </ol>
+        </div>
+        <div class="card">
+          <ol start="7" style="margin-bottom:0">
+            <li>Qu'est-ce qui vous a déjà déçu chez un prestataire ?</li>
+            <li>Comment préférez-vous payer (espèces, MVola, virement) ?</li>
+            <li>Qui d'autre, dans votre entourage, a le même besoin ?</li>
+            <li>Si je livre la semaine prochaine, êtes-vous prêt à essayer ?</li>
+            <li>Quel serait le motif de refus ?</li>
+            <li>Puis-je vous citer comme référence si l'essai est concluant ?</li>
+          </ol>
+        </div>
+      </div>
+
+      <h3>Annexe B — Glossaire utile</h3>
+      <div class="table-scroll">
+      <table>
+        <thead><tr><th>Terme</th><th>Signification</th></tr></thead>
+        <tbody>
+          <tr><th>Ariary (Ar)</th><td>Monnaie malgache. 1 € ≈ 4 800 Ar (hypothèse de travail 2026, à réactualiser).</td></tr>
+          <tr><th>JIRAMA</th><td>Compagnie nationale d'eau et d'électricité, en situation de sous-capacité chronique.</td></tr>
+          <tr><th>SMA</th><td>Société municipale d'assainissement d'Antananarivo (collecte des déchets, curage).</td></tr>
+          <tr><th>Fokontany</th><td>Plus petite unité administrative de quartier ; point d'entrée pour les démarches et la confiance locale.</td></tr>
+          <tr><th>Taxi-be</th><td>Minibus de transport en commun, principal mode de déplacement de la capitale.</td></tr>
+          <tr><th>MVola / Orange Money / Airtel Money</th><td>Services de paiement mobile ; environ 15 M de comptes au total.</td></tr>
+          <tr><th>Impôt synthétique</th><td>Régime simplifié à 5 % du chiffre d'affaires pour les petites structures.</td></tr>
+          <tr><th>CNaPS</th><td>Caisse nationale de prévoyance sociale ; cotisations patronales ≈ 13 %.</td></tr>
+          <tr><th>EDBM</th><td>Economic Development Board of Madagascar : guichet unique de création d'entreprise et d'investissement.</td></tr>
+          <tr><th>Diaspora</th><td>Malgaches de l'étranger ; leurs transferts représentent ≈ 6 % du PIB.</td></tr>
+        </tbody>
+      </table>
+      </div>
+
+      <h3>Annexe C — Sources principales</h3>
+      <p class="srcs">Consultées le 30 octobre 2026. Les données 2026 sont, pour partie, des estimations ou des projections d'institutions internationales ; elles doivent être considérées comme des ordres de grandeur.</p>
+      <div class="grid g2">
+        <div>
+          <h4>Macroéconomie &amp; politique</h4>
+          <ul class="srcs">
+            <li>Banque mondiale — <em>Madagascar, aperçu pays</em> (croissance, pauvreté 66,5 %, inflation 8,6 % à juin 2026) — banquemondiale.org</li>
+            <li>FMI, Perspectives économiques régionales, via Madagascar Tribune — croissance 3,6 %, inflation 8,3 % en 2026</li>
+            <li>Mada360 — <em>Économie de Madagascar en 2026</em> : PIB 21,2 Md$, SMIG 300 000 Ar, change</li>
+            <li>Financial Afrik — taux directeur maintenu à 12 % (mai 2026), appréciation de l'ariary au T1 2026</li>
+            <li>RFI, Afriquinfos, BBC Afrique, ConstitutionNet — transition militaire, calendrier électoral 2027</li>
+            <li>Le360 / USDA — importations de riz ≈ 850 000 t (2026/27)</li>
+            <li>Midi Madagasikara / OMH — prix des carburants (SP95 5 300 Ar, gasoil 4 860 Ar, septembre 2026)</li>
+          </ul>
+          <h4>Antananarivo : eau, déchets, mobilité</h4>
+          <ul class="srcs">
+            <li>Newsmada &amp; Midi Madagasikara — déficit de production d'eau de 144 000 m³/jour (mai 2026)</li>
+            <li>L'Express de Madagascar — 157 fuites sur 195 km, 64 km de conduites à remplacer</li>
+            <li>allAfrica / RFI — bidon d'eau à 3 000 Ar contre 500 Ar habituellement</li>
+            <li>L'Express — assainissement : 1 300 t/jour, ≈ 1 Md Ar/mois, redevance RF2 à 2 000 Ar</li>
+            <li>Banque mondiale via allAfrica / 2424.mg — congestion : 40 M$/an, 0,34 % du PIB, 134<sup>e</sup>/150</li>
+            <li>World Population Review — Antananarivo : 2 567 094 habitants en 2026, +3,97 %/an</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Numérique, paiements, coûts</h4>
+          <ul class="srcs">
+            <li>Agence Ecofin / Data Reportal — 21,8 M d'abonnements mobiles, 20,4 % d'internet, 24 % de smartphones</li>
+            <li>allAfrica — nouveaux tarifs Orange (1 Go à 1 000 Ar/24 h) depuis octobre 2026</li>
+            <li>Madagascar Newsroom — MVola : ≈ 4 M d'utilisateurs, 60 000 points de cash, 50 000 marchands</li>
+            <li>Comparatifs PME 2026 — frais marchands 1,5–2,5 %, plafonds mobile money</li>
+            <li>EDM Talent / Aurysse — salaires développeurs et tarifs de facturation export 2026</li>
+            <li>Madamag / OFIM — prix immobilier (615 €/m²) et loyers à Antananarivo</li>
+            <li>Prowatt Madagascar — panneau 550 W à 520 000 Ar ; kits solaires 1–5 M Ar</li>
+            <li>PAMF / OTIV / CECAM — taux de microfinance 1,3–2,5 % par mois</li>
+            <li>Cyril Jarnias / Madagascar Invest — fiscalité (IS 20 %, TVA 20 %, impôt synthétique 5 %, CNaPS 13 %)</li>
+          </ul>
+          <h4>Documents du projet</h4>
+          <ul class="srcs">
+            <li><strong>MODELE-FINANCIER.xlsx</strong> — hypothèses et calculs des 4 plans, modifiables</li>
+            <li><strong>SYNTHESE.md</strong> — version courte à partager</li>
+            <li><strong>SOURCES.md</strong> — liste complète avec liens</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="callout note" style="margin-top:28px">
+        <span class="ct">Avertissement</span>
+        <p>Ce document est une analyse indépendante à visée d'aide à la décision. Il ne constitue ni un conseil en investissement, ni un conseil juridique ou fiscal. Les projections reposent sur des hypothèses explicitées et sur des prix observés en 2026 ; elles ne garantissent aucun résultat. Avant tout engagement : validez vos prix sur le terrain, faites vérifier votre régime fiscal par un professionnel, et n'investissez que ce que vous pouvez perdre.</p>
+      </div>
+    </section>
+
+    </main>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <p style="margin:0 0 8px"><strong style="color:#f4f1ea">Madagascar &amp; Antananarivo 2026 — Diagnostic, marché et opportunités d'affaires</strong></p>
+    <p style="margin:0 0 8px">Rapport établi le 30 octobre 2026. Devise de travail : 1 € ≈ 4 800 Ar. Données macro et sectorielles sourcées, projections financières estimatives.</p>
+    <p style="margin:0;color:#6f8595;font-size:.8rem">Documents liés : MODELE-FINANCIER.xlsx · SYNTHESE.md · SOURCES.md</p>
+  </div>
+</footer>
+
+<button class="print-btn" onclick="window.print()">Imprimer / PDF</button>
+
+</body>
+</html>
